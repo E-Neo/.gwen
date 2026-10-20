@@ -3,130 +3,117 @@ name: pptx-guidance
 description: Use when an Agent needs to generate or improve a PowerPoint presentation (.pptx). Complements the gwen skill, which covers tool usage.
 ---
 
-# 幻灯片编写指南
+# Slide writing guidance
 
-我们是一家基础软件公司的技术洞察组。
-幻灯片也被称作“胶片”。我们的胶片一定要有“逻辑”，这里的逻辑很多时候可以理解成“故事”，看上去讲得通讲得顺。
-我们的胶片不是信息的简单罗列，既要有客观事实，更要给出趋势观点。
+We are the technology insights team of an infrastructure-software company.
+A deck must have "logic" - logic here usually means a *story* that reads
+smoothly and holds together. A deck is not a flat list of facts: it should
+combine objective facts with a point of view on trends.
 
-## 整体结构
+## Overall structure
 
-一个完整胶片通常包含“封面页”、“章节页”、“结束页”，页数几十页的大胶片可以在每个章节前加一个“目录页”。
+A complete deck usually contains a cover, chapter pages, and an end page.
+Larger decks (dozens of pages) add a contents page before each chapter.
 
-整体结构采用“总-分-总”，章节页按作用可分为“帽子页”（接下来几页胶片的总起页，一般每个章节前有一个帽子页）、“内容页”、“启示页”（之前内容的总结启示，通常在结束页之前有一个总的启示页）。
+The structure follows "macro -> micro -> macro". Chapter pages fall into
+three roles:
 
-## 单页胶片的写法
+- **Hat pages** - the overview that leads into the next run of pages;
+  typically one before each chapter.
+- **Content pages** - the body of the argument.
+- **Insight pages** - the takeaway of the preceding content; usually one
+  final insight page right before the end page.
 
-单页胶片一般由“标题”、“正文”、“启示”三部分组成。
+## Anatomy of a single slide
 
-一般地，字体用“Microsoft Yahei”，数字/英文和汉字间不要空格。
+A slide is made of three parts: a **title**, **body**, and a **takeaway**
+(the insight).
 
-### 标题即观点
+Typography defaults: font `Microsoft Yahei`. Do not put a space between
+digits/Latin letters and Chinese characters. Avoid obviously
+AI-generated-looking punctuation such as `·`, `「」`, `『』`.
 
-标题必须直接给出观点，通常是“一个现象 + 这个现象意味着什么”，主题词不是标题。
+### The title is a claim
 
-- 反例：《NV G3.5技术介绍》
-  - 点评：这只是个主题词，领导看这个词得不到任何信息，很多领导只看个标题，如果标题不好上来就废了。
-- 正例：《NV新增G3.5层，GPU直连远端存储加速推理，长上下文Agent负载TPS提升5x↑》
-  - 点评：现象“NV新增G3.5层”，稍微解释一下前面的新名词G3.5是什么“GPU直连远端存储加速推理”，它有什么用？意味着什么？价值是什么？“长上下文Agent负载TPS提升5x↑”，最好有量化数据“提升5x↑”、“降低50%↓”。
+The title must state a point directly - typically "an observation + what the
+observation implies". A topic keyword is not a title.
 
-标题默认样式：24pt红色加粗左对齐，位于幻灯片顶部，尽量控制在一行。
+- Bad: "NV G3.5 Technical Introduction"
+  - Why: this is only a keyword. A reader scanning titles gets no
+    information, and many readers only ever read the title - if the title is
+    weak, the slide is lost.
+- Good: "NV adds a G3.5 layer - GPU connects to remote storage directly to
+  accelerate inference, long-context Agent workloads see TPS up 5x"
+  - Why: it names the observation ("NV adds a G3.5 layer"), briefly explains
+    the new term (GPU connecting to remote storage to accelerate inference),
+    then says what it means and what it's worth. Quantify whenever possible
+    ("TPS up 5x", "cost down 50%").
 
-### 正文
+Default title style: 24pt bold red (`C7000A`), left-aligned, at the top of
+the slide, ideally a single line.
 
-正文部分灵活多变且信息量大，一定要有逻辑，不能是主题词或者信息的罗列，且每页只能有一个逻辑。常见的逻辑有：
+### Body
 
-- Bad → Good：左边讲坏的（AS-IS、别人、……）是什么有什么问题，一个无边框灰色填充粗箭头，右边讲好的（TO-BE、我们、……）是什么有什么价值。
-- 分阶段演进：各阶段特点和典型代表，下面导出各阶段的诉求是什么，未来趋势是什么。
-- 总-分：左边讲一个大逻辑，右边展开讲几个小逻辑。例如左边是一个 AS-IS → TO-BE，右边讲两三个这种演进带来的技术趋势；或者左边画一个软件栈，在上面红色标几个关键技术点“➊➋➌...”，右边展开讲这几个技术点。总分结构常用的素材是![perspective-floor](references/perspective-floor.svg)，根据情况旋转让短边朝向“总”，长边朝向“分”。
-- 分类：根据某种维度划分出几个相对独立的小逻辑，每个逻辑块内讲一个故事。
+The body is flexible and information-dense, but it must have logic, and each
+page carries exactly one logical thread. Common patterns:
 
-正文样式相对灵活，需要具体情况具体分析，但根据常见逻辑有些常用组件可以借鉴：
+- **Bad -> Good**: the left side explains what is wrong with the current
+  state (AS-IS / others / ...), joined by a wide, borderless grey arrow; the
+  right side explains the better state (TO-BE / ours / ...) and its value.
+  See [`references/bad-to-good.toml`](references/bad-to-good.toml).
+- **Phased evolution**: give the characteristics and representative of each
+  phase, then derive the needs of each phase below, and finally the future
+  trend. See [`references/phase-evolution.toml`](references/phase-evolution.toml)
+  and [`references/staircase.toml`](references/staircase.toml).
+- **Macro -> micro**: a big logic on the left, expanded into several small
+  logics on the right. For example: an AS-IS -> TO-BE on the left with two or
+  three resulting technology trends on the right; or a software stack with a
+  few key points marked in red (`➊➋➌...`) and the points expanded on the
+  right. A common asset for macro -> micro layouts is
+  ![perspective-floor](references/perspective-floor.svg) - rotate it so the
+  short edge faces the "macro" side and the long edge the "micro" side.
+- **Classification**: split the topic into several relatively independent
+  small logics along some dimension; each block tells its own story.
 
-- 五边形箭头和V形箭头组合画出阶段演进作为正文上半部分
-  ```text
-  |---------\-----------------\------------------\-----------------------\
-  | ChatBot  \     Copolit     \      Agent       \        Embody         \
-  | ChatGPT  /  MS365 Copilot  / Code, Claw, ...  /          ...          /
-  |---------/-----------------/------------------/-----------------------/
-  |                           |                  |                       |
-  |<----- Mature Phase ------>|<- Growth Phase ->|<- Exploratory Phash ->|
-  |                           |                  |                       |
-  ```
-  下方再根据阶段列出不同特点和诉求（此处省略）。
-- 阶梯表示阶段演进
-  ```text
-                                     Phase 4
-                          Phase 3  -----------
-               Phase 2  ----------/|---------|
-    Phase 1  ----------/|---------|| Content |
-  ----------/|---------|| Content ||---------|
-  |---------|| Content ||---------|
-  | Content ||---------|
-  |---------|
-  ```
-- 矩形框图
-  ```text
-  |-------------------------------|
-  |          Model/Agent          |
-  | |---------------------------| |
-  | | Coding | Office | Finance | |
-  | |---------------------------| |
-  | |           Model           | |
-  | |---------------------------| |
-  |-------------------------------|
-  |-------------------------------|
-  |           AI Infra            |
-  |-------------------------------|
-  |-------------------------------|
-  |           Hardware            |
-  |-------------------------------|
-  |  GPU  |  TPU  |  NPU  |  CPU  |
-  |-------------------------------|
-  ```
-  这种框图是领导最爱看的，例如软件栈、架构图等能用框图表示的逻辑就用框图表示。
-- 小标题+内容
-  一种是标题和内容采用等宽矩形。标题采用黑色加粗14/16pt，矩形无边框 `#ccecff` 填充；内容矩形 `#d3d3d3` 边框 `#f2f2f2` 填充。
-  ```text
-  |---------|
-  |  Title  |
-  |---------|
-  |---------|
-  | Content |
-  |---------|
-  ```
-  一种是标题骑在内容顶边。标题 `#0000ff` 加粗14/16pt，无边框白色填充，注意标题控制宽度不要让空白太多；内容圆角矩形（radius 0.1） `#d3d3d3` 边框无填充。
-  ```text
-  /--- Title ---\
-  |             |
-  |   Content   |
-  |             |
-  \-------------/
-  ```
-  这几种“小标题+内容”样式每页固定用一种，但不同页可以用不同的增加灵活性。注意小标题也不能是简单的关键词。
-- 线条/矩形勾勒表格
-  ```text
-  | Label 1 | A | B |
-  |---------+---+---|
-  | Label 2 | C | D |
-  ```
-  ```text
-  |---------||---||---|
-  | Label 1 || A || B |
-  |---------||---||---|
-  |---------||---||---|
-  | Label 2 || C || D |
-  |---------||---||---|
-  ```
+The body is case-by-case, but these reusable building blocks cover most
+patterns:
 
-正文字体一般12pt，重要部分红色/蓝色加粗。参考来源 `#a3a3a3` 斜体10.5pt。另外注意正文不要用太多不同颜色，常用的几种颜色就是黑、白、红、蓝、灰，其中红蓝用于强调，要慎重使用。
+- **Pentagon + chevron combo** for phased evolution as the upper half of the
+  page; list each phase's characteristics and needs below.
+- **Staircase** for phased evolution.
+- **Block diagrams** - this is the style most readers respond to. Any logic
+  expressible as boxes (software stacks, architecture) should be drawn as
+  boxes. See [`references/stack.toml`](references/stack.toml).
+- **Label + content boxes**, two variants:
+  - Equal-width boxes: the label is black bold 14/16pt in a borderless
+    `#ccecff` box; the content box is `#f2f2f2`-filled with a `#d3d3d3`
+    border. See [`references/title-content-boxes.toml`](references/title-content-boxes.toml).
+  - Label riding the top edge: the label is `#0000ff` bold 14/16pt, white
+    fill, no border, and kept narrow so there is not much dead space; the
+    content is a round rectangle (`rect_radius` 0.1) with a `#d3d3d3` border
+    and no fill. See [`references/title-on-border.toml`](references/title-on-border.toml).
+  - Use one variant consistently within a page; different pages may use
+    different variants for variety. A label must still be a claim, not a bare
+    keyword.
+- **Tables sketched with lines/rectangles**. See
+  [`references/table.toml`](references/table.toml).
 
-我们的每页胶片信息密度都很高，不要留明显的空白。也要注意我们写正文是为了支撑标题和启示里的观点，不要为了写而写。写的每个内容都要和其他内容形成逻辑。
+Body font is generally 12pt; important parts are bold red or blue. Sources
+are 10.5pt grey italic (`#a3a3a3`). Keep the palette small - black, white,
+red, blue, grey - and use red/blue for emphasis only, sparingly.
 
-### 启示即观点
+Our slides are information-dense; avoid obvious empty areas. Write body text
+to support the title and takeaway, not for its own sake: every item should
+relate logically to the rest of the page.
 
-启示位于胶片底部，是整页胶片的落点，有的领导只看一个标题和启示，因此启示也要仔细斟酌。
+### The takeaway is a claim
 
-启示通常包含“so what”和“now what”两部分，前半句总结趋势，后半句给出建议方向。
+The takeaway sits at the bottom of the slide and is the landing point of the
+whole page. Some readers look at only the title and the takeaway, so it
+deserves the same care as the title.
 
-启示字体一般16pt蓝色`#0000ff`加粗，水平居中，最好只有一行50字以内。
+A takeaway usually has two parts: **so-what** and **now-what** - the first
+half summarizes the trend, the second half suggests a direction.
+
+Default takeaway style: 16pt bold blue (`#0000ff`), horizontally centered,
+ideally a single line of at most 50 characters.

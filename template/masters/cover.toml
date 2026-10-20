@@ -27,8 +27,6 @@ h = "3cm"
 w = "25cm"
 x = "2.5cm"
 y = "8.5cm"
-
 font_size = 16
-color = "C7000A"
 bold = true
 text = "Author"

@@ -23,6 +23,14 @@ color = "1D1D1B"
 text = "[E-Neo @ GitHub](https://github.com/E-Neo)"
 
 [[shapes]]
+type = "image"
+src = "media/logo.svg"
+h = "0.76cm"
+w = "3.53cm"
+x = "28.32cm"
+y = "17.57cm"
+
+[[shapes]]
 type = "placeholder"
 name = "title"
 ph_type = "title"

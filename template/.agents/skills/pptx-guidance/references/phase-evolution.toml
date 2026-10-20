@@ -1,0 +1,176 @@
+# Phased evolution: chevron stages on top, stage bars below, then
+# per-stage notes and a trend column.
+# Master: "content". Copy into slides/ and list in a [[sections]] entry.
+
+master = "content"
+
+[[shapes]]
+type = "text"
+placeholder = "title"
+text = "TODO: Title - an observation plus what it implies"
+
+# Four stage chevrons. Each overlaps the next by 0.6cm so the arrowheads
+# interlock. One stage is highlighted in red.
+[[shapes]]
+type = "chevron"
+x = "1cm"
+y = "3.2cm"
+w = "8cm"
+h = "2.4cm"
+fill = { color = "D3D3D3" }
+line = { type = "none" }
+align = "center"
+valign = "middle"
+font_size = 12
+color = "1D1D1B"
+text = "**ChatBot**\nChatGPT"
+
+[[shapes]]
+type = "chevron"
+x = "8.4cm"
+y = "3.2cm"
+w = "8cm"
+h = "2.4cm"
+fill = { color = "D3D3D3" }
+line = { type = "none" }
+align = "center"
+valign = "middle"
+font_size = 12
+color = "1D1D1B"
+text = "**Copilot**\nMS365 Copilot"
+
+[[shapes]]
+type = "chevron"
+x = "15.8cm"
+y = "3.2cm"
+w = "8cm"
+h = "2.4cm"
+fill = { color = "C7000A" }
+line = { type = "none" }
+align = "center"
+valign = "middle"
+font_size = 12
+color = "FFFFFF"
+text = "**Agent**\nCode, Claude, ..."
+
+[[shapes]]
+type = "chevron"
+x = "23.2cm"
+y = "3.2cm"
+w = "8cm"
+h = "2.4cm"
+fill = { color = "1D1D1B" }
+line = { type = "none" }
+align = "center"
+valign = "middle"
+font_size = 12
+color = "FFFFFF"
+text = "**Embodied**\nRobots, ..."
+
+# Stage bars under the chevrons: mature / growth / exploratory.
+[[shapes]]
+type = "rect"
+x = "1cm"
+y = "6cm"
+w = "15.2cm"
+h = "0.2cm"
+fill = { color = "D3D3D3" }
+line = { type = "none" }
+
+[[shapes]]
+type = "text"
+x = "1cm"
+y = "6.25cm"
+w = "15.2cm"
+h = "0.6cm"
+align = "center"
+font_size = 10
+color = "808080"
+text = "Mature phase"
+
+[[shapes]]
+type = "rect"
+x = "15.8cm"
+y = "6cm"
+w = "7.4cm"
+h = "0.2cm"
+fill = { color = "C7000A" }
+line = { type = "none" }
+
+[[shapes]]
+type = "text"
+x = "15.8cm"
+y = "6.25cm"
+w = "7.4cm"
+h = "0.6cm"
+align = "center"
+font_size = 10
+color = "808080"
+text = "Growth phase"
+
+[[shapes]]
+type = "rect"
+x = "23.2cm"
+y = "6cm"
+w = "7.4cm"
+h = "0.2cm"
+fill = { color = "1D1D1B" }
+line = { type = "none" }
+
+[[shapes]]
+type = "text"
+x = "23.2cm"
+y = "6.25cm"
+w = "7.4cm"
+h = "0.6cm"
+align = "center"
+font_size = 10
+color = "808080"
+text = "Exploratory phase"
+
+# Notes below the diagram: characteristics on the left, needs on the right.
+[[shapes]]
+type = "text"
+x = "1cm"
+y = "7.4cm"
+w = "15cm"
+h = "6cm"
+font_size = 12
+color = "1D1D1B"
+valign = "top"
+text = "- **Bots**: solve isolated, single-turn tasks\n- **Copilots**: assist inside one product's workflow\n- **Agents**: plan and act across tools\n- **Embodied**: act on the physical world"
+
+[[shapes]]
+type = "text"
+x = "17.4cm"
+y = "7.4cm"
+w = "15cm"
+h = "6cm"
+font_size = 12
+color = "1D1D1B"
+valign = "top"
+text = "- What each stage demands\n- What will carry over to the next stage\n- Where the trend is heading"
+
+# Takeaway: so-what + now-what, one line.
+[[shapes]]
+type = "text"
+x = "1cm"
+y = "15.9cm"
+w = "31.8cm"
+h = "1.1cm"
+align = "center"
+font_size = 16
+bold = true
+color = "0000FF"
+text = "TODO: so-what and now-what, ideally within 50 characters"
+
+[[shapes]]
+type = "text"
+x = "1cm"
+y = "17.1cm"
+w = "31.8cm"
+h = "0.5cm"
+font_size = 10.5
+italic = true
+color = "A3A3A3"
+text = "TODO: source reference"

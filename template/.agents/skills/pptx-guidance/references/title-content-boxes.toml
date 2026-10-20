@@ -1,0 +1,97 @@
+# Label + content boxes, equal-width variant: the label is black bold in a
+# borderless #ccecff box; the content box is #f2f2f2-filled with a #d3d3d3
+# border. Two examples side by side; use one variant consistently per page.
+# Master: "content". Copy into slides/ and list in a [[sections]] entry.
+
+master = "content"
+
+[[shapes]]
+type = "text"
+placeholder = "title"
+text = "TODO: Title - an observation plus what it implies"
+
+# Example 1.
+[[shapes]]
+type = "rect"
+x = "1.5cm"
+y = "3.4cm"
+w = "14.5cm"
+h = "1.2cm"
+fill = { color = "CCECFF" }
+line = { type = "none" }
+align = "left"
+valign = "middle"
+font_size = 14
+bold = true
+color = "1D1D1B"
+text = "Label = a claim, not a keyword"
+
+[[shapes]]
+type = "rect"
+x = "1.5cm"
+y = "4.8cm"
+w = "14.5cm"
+h = "4.4cm"
+fill = { color = "F2F2F2" }
+line = { color = "D3D3D3", width = 1 }
+align = "left"
+valign = "top"
+font_size = 12
+color = "1D1D1B"
+margin = ["0.4cm", "0.4cm", "0.4cm", "0.4cm"]
+text = "- Supporting point one\n- Supporting point two\n- Supporting point three"
+
+# Example 2.
+[[shapes]]
+type = "rect"
+x = "17cm"
+y = "3.4cm"
+w = "14.5cm"
+h = "1.2cm"
+fill = { color = "CCECFF" }
+line = { type = "none" }
+align = "left"
+valign = "middle"
+font_size = 14
+bold = true
+color = "1D1D1B"
+text = "Each label still states a point"
+
+[[shapes]]
+type = "rect"
+x = "17cm"
+y = "4.8cm"
+w = "14.5cm"
+h = "4.4cm"
+fill = { color = "F2F2F2" }
+line = { color = "D3D3D3", width = 1 }
+align = "left"
+valign = "top"
+font_size = 12
+color = "1D1D1B"
+margin = ["0.4cm", "0.4cm", "0.4cm", "0.4cm"]
+text = "- Supporting point one\n- Supporting point two\n- Supporting point three"
+
+# Takeaway: so-what + now-what, one line.
+[[shapes]]
+type = "text"
+x = "1cm"
+y = "15.9cm"
+w = "31.8cm"
+h = "1.1cm"
+align = "center"
+font_size = 16
+bold = true
+color = "0000FF"
+text = "TODO: so-what and now-what, ideally within 50 characters"
+
+[[shapes]]
+type = "text"
+x = "1cm"
+y = "17.1cm"
+w = "31.8cm"
+h = "0.5cm"
+font_size = 10.5
+italic = true
+color = "A3A3A3"
+text = "TODO: source reference"

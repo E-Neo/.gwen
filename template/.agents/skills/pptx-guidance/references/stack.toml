@@ -1,0 +1,290 @@
+# Layered block diagram: a software stack as stacked boxes, each layer
+# carrying its own inner boxes. Red numbered markers ➊➋➌ point at the key
+# layers and are expanded in the right-hand notes.
+# Master: "content". Copy into slides/ and list in a [[sections]] entry.
+
+master = "content"
+
+[[shapes]]
+type = "text"
+placeholder = "title"
+text = "TODO: Title - an observation plus what it implies"
+
+# Right-hand notes expanding the marked layers.
+[[shapes]]
+type = "text"
+x = "23cm"
+y = "4cm"
+w = "9.5cm"
+h = "8cm"
+font_size = 12
+color = "1D1D1B"
+valign = "top"
+text = "- ➊ Model/Agent: reason and act across tools\n- ➋ AI Infra: training, serving, data plumbing\n- ➌ Hardware: accelerators set the cost curve"
+
+# Layer 1: Model / Agent.
+[[shapes]]
+type = "rect"
+x = "1.5cm"
+y = "7.6cm"
+w = "20cm"
+h = "2.4cm"
+fill = { color = "F2F2F2" }
+line = { color = "D3D3D3", width = 1 }
+
+[[shapes]]
+type = "text"
+x = "2.2cm"
+y = "7.7cm"
+w = "8cm"
+h = "0.6cm"
+font_size = 13
+bold = true
+color = "1D1D1B"
+text = "Model / Agent"
+
+[[shapes]]
+type = "rect"
+x = "2.2cm"
+y = "8.7cm"
+w = "5.8cm"
+h = "1.2cm"
+fill = { color = "FFFFFF" }
+line = { color = "D3D3D3", width = 1 }
+align = "center"
+valign = "middle"
+font_size = 11
+color = "1D1D1B"
+text = "Coding"
+
+[[shapes]]
+type = "rect"
+x = "8.4cm"
+y = "8.7cm"
+w = "5.8cm"
+h = "1.2cm"
+fill = { color = "FFFFFF" }
+line = { color = "D3D3D3", width = 1 }
+align = "center"
+valign = "middle"
+font_size = 11
+color = "1D1D1B"
+text = "Office"
+
+[[shapes]]
+type = "rect"
+x = "14.6cm"
+y = "8.7cm"
+w = "5.8cm"
+h = "1.2cm"
+fill = { color = "FFFFFF" }
+line = { color = "D3D3D3", width = 1 }
+align = "center"
+valign = "middle"
+font_size = 11
+color = "1D1D1B"
+text = "Finance"
+
+# Layer 2: AI Infra.
+[[shapes]]
+type = "rect"
+x = "1.5cm"
+y = "10.4cm"
+w = "20cm"
+h = "2.4cm"
+fill = { color = "F2F2F2" }
+line = { color = "D3D3D3", width = 1 }
+
+[[shapes]]
+type = "text"
+x = "2.2cm"
+y = "10.5cm"
+w = "8cm"
+h = "0.6cm"
+font_size = 13
+bold = true
+color = "1D1D1B"
+text = "AI Infra"
+
+[[shapes]]
+type = "rect"
+x = "2.2cm"
+y = "11.5cm"
+w = "5.8cm"
+h = "1.2cm"
+fill = { color = "FFFFFF" }
+line = { color = "D3D3D3", width = 1 }
+align = "center"
+valign = "middle"
+font_size = 11
+color = "1D1D1B"
+text = "Training"
+
+[[shapes]]
+type = "rect"
+x = "8.4cm"
+y = "11.5cm"
+w = "5.8cm"
+h = "1.2cm"
+fill = { color = "FFFFFF" }
+line = { color = "D3D3D3", width = 1 }
+align = "center"
+valign = "middle"
+font_size = 11
+color = "1D1D1B"
+text = "Serving"
+
+[[shapes]]
+type = "rect"
+x = "14.6cm"
+y = "11.5cm"
+w = "5.8cm"
+h = "1.2cm"
+fill = { color = "FFFFFF" }
+line = { color = "D3D3D3", width = 1 }
+align = "center"
+valign = "middle"
+font_size = 11
+color = "1D1D1B"
+text = "Data"
+
+# Layer 3: Hardware.
+[[shapes]]
+type = "rect"
+x = "1.5cm"
+y = "13.2cm"
+w = "20cm"
+h = "2.4cm"
+fill = { color = "F2F2F2" }
+line = { color = "D3D3D3", width = 1 }
+
+[[shapes]]
+type = "text"
+x = "2.2cm"
+y = "13.3cm"
+w = "8cm"
+h = "0.6cm"
+font_size = 13
+bold = true
+color = "1D1D1B"
+text = "Hardware"
+
+[[shapes]]
+type = "rect"
+x = "2.2cm"
+y = "14.3cm"
+w = "4.35cm"
+h = "1.2cm"
+fill = { color = "FFFFFF" }
+line = { color = "D3D3D3", width = 1 }
+align = "center"
+valign = "middle"
+font_size = 11
+color = "1D1D1B"
+text = "GPU"
+
+[[shapes]]
+type = "rect"
+x = "6.75cm"
+y = "14.3cm"
+w = "4.35cm"
+h = "1.2cm"
+fill = { color = "FFFFFF" }
+line = { color = "D3D3D3", width = 1 }
+align = "center"
+valign = "middle"
+font_size = 11
+color = "1D1D1B"
+text = "TPU"
+
+[[shapes]]
+type = "rect"
+x = "11.3cm"
+y = "14.3cm"
+w = "4.35cm"
+h = "1.2cm"
+fill = { color = "FFFFFF" }
+line = { color = "D3D3D3", width = 1 }
+align = "center"
+valign = "middle"
+font_size = 11
+color = "1D1D1B"
+text = "NPU"
+
+[[shapes]]
+type = "rect"
+x = "15.85cm"
+y = "14.3cm"
+w = "4.35cm"
+h = "1.2cm"
+fill = { color = "FFFFFF" }
+line = { color = "D3D3D3", width = 1 }
+align = "center"
+valign = "middle"
+font_size = 11
+color = "1D1D1B"
+text = "CPU"
+
+# Red markers ➊➋➌ on the layers, linked to the right-hand notes.
+[[shapes]]
+type = "text"
+x = "21.8cm"
+y = "8cm"
+w = "1cm"
+h = "1.6cm"
+align = "center"
+valign = "middle"
+font_size = 18
+bold = true
+color = "C7000A"
+text = "➊"
+
+[[shapes]]
+type = "text"
+x = "21.8cm"
+y = "10.8cm"
+w = "1cm"
+h = "1.6cm"
+align = "center"
+valign = "middle"
+font_size = 18
+bold = true
+color = "C7000A"
+text = "➋"
+
+[[shapes]]
+type = "text"
+x = "21.8cm"
+y = "13.6cm"
+w = "1cm"
+h = "1.6cm"
+align = "center"
+valign = "middle"
+font_size = 18
+bold = true
+color = "C7000A"
+text = "➌"
+
+# Takeaway: so-what + now-what, one line.
+[[shapes]]
+type = "text"
+x = "1cm"
+y = "15.9cm"
+w = "31.8cm"
+h = "1.1cm"
+align = "center"
+font_size = 16
+bold = true
+color = "0000FF"
+text = "TODO: so-what and now-what, ideally within 50 characters"
+
+[[shapes]]
+type = "text"
+x = "1cm"
+y = "17.1cm"
+w = "31.8cm"
+h = "0.5cm"
+font_size = 10.5
+italic = true
+color = "A3A3A3"
+text = "TODO: source reference"

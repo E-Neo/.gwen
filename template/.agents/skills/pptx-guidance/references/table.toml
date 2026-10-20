@@ -1,0 +1,255 @@
+# A table sketched with rectangles: header row shaded, label column on the
+# left, one rect per cell carrying its text. For a merged-header look, draw
+# one wide rect across several cells and let the cell text start below it.
+# Master: "content". Copy into slides/ and list in a [[sections]] entry.
+
+master = "content"
+
+[[shapes]]
+type = "text"
+placeholder = "title"
+text = "TODO: Title - an observation plus what it implies"
+
+# Header row.
+[[shapes]]
+type = "rect"
+x = "2cm"
+y = "3.6cm"
+w = "6cm"
+h = "1.4cm"
+fill = { color = "EDEDED" }
+line = { color = "D3D3D3", width = 1 }
+align = "center"
+valign = "middle"
+font_size = 12
+bold = true
+color = "1D1D1B"
+text = "Item"
+
+[[shapes]]
+type = "rect"
+x = "8cm"
+y = "3.6cm"
+w = "7cm"
+h = "1.4cm"
+fill = { color = "EDEDED" }
+line = { color = "D3D3D3", width = 1 }
+align = "center"
+valign = "middle"
+font_size = 12
+bold = true
+color = "1D1D1B"
+text = "A"
+
+[[shapes]]
+type = "rect"
+x = "15cm"
+y = "3.6cm"
+w = "7cm"
+h = "1.4cm"
+fill = { color = "EDEDED" }
+line = { color = "D3D3D3", width = 1 }
+align = "center"
+valign = "middle"
+font_size = 12
+bold = true
+color = "1D1D1B"
+text = "B"
+
+[[shapes]]
+type = "rect"
+x = "22cm"
+y = "3.6cm"
+w = "7cm"
+h = "1.4cm"
+fill = { color = "EDEDED" }
+line = { color = "D3D3D3", width = 1 }
+align = "center"
+valign = "middle"
+font_size = 12
+bold = true
+color = "1D1D1B"
+text = "C"
+
+# Row 1.
+[[shapes]]
+type = "rect"
+x = "2cm"
+y = "5.2cm"
+w = "6cm"
+h = "1.5cm"
+line = { color = "D3D3D3", width = 1 }
+align = "center"
+valign = "middle"
+font_size = 12
+color = "1D1D1B"
+text = "Metric 1"
+
+[[shapes]]
+type = "rect"
+x = "8cm"
+y = "5.2cm"
+w = "7cm"
+h = "1.5cm"
+line = { color = "D3D3D3", width = 1 }
+align = "center"
+valign = "middle"
+font_size = 12
+color = "1D1D1B"
+text = "value"
+
+[[shapes]]
+type = "rect"
+x = "15cm"
+y = "5.2cm"
+w = "7cm"
+h = "1.5cm"
+line = { color = "D3D3D3", width = 1 }
+align = "center"
+valign = "middle"
+font_size = 12
+color = "1D1D1B"
+text = "value"
+
+[[shapes]]
+type = "rect"
+x = "22cm"
+y = "5.2cm"
+w = "7cm"
+h = "1.5cm"
+line = { color = "D3D3D3", width = 1 }
+align = "center"
+valign = "middle"
+font_size = 12
+color = "1D1D1B"
+text = "value"
+
+# Row 2.
+[[shapes]]
+type = "rect"
+x = "2cm"
+y = "6.9cm"
+w = "6cm"
+h = "1.5cm"
+line = { color = "D3D3D3", width = 1 }
+align = "center"
+valign = "middle"
+font_size = 12
+color = "1D1D1B"
+text = "Metric 2"
+
+[[shapes]]
+type = "rect"
+x = "8cm"
+y = "6.9cm"
+w = "7cm"
+h = "1.5cm"
+line = { color = "D3D3D3", width = 1 }
+align = "center"
+valign = "middle"
+font_size = 12
+color = "1D1D1B"
+text = "value"
+
+[[shapes]]
+type = "rect"
+x = "15cm"
+y = "6.9cm"
+w = "7cm"
+h = "1.5cm"
+line = { color = "D3D3D3", width = 1 }
+align = "center"
+valign = "middle"
+font_size = 12
+color = "1D1D1B"
+text = "value"
+
+[[shapes]]
+type = "rect"
+x = "22cm"
+y = "6.9cm"
+w = "7cm"
+h = "1.5cm"
+line = { color = "D3D3D3", width = 1 }
+align = "center"
+valign = "middle"
+font_size = 12
+color = "1D1D1B"
+text = "value"
+
+# Row 3.
+[[shapes]]
+type = "rect"
+x = "2cm"
+y = "8.6cm"
+w = "6cm"
+h = "1.5cm"
+line = { color = "D3D3D3", width = 1 }
+align = "center"
+valign = "middle"
+font_size = 12
+color = "1D1D1B"
+text = "Metric 3"
+
+[[shapes]]
+type = "rect"
+x = "8cm"
+y = "8.6cm"
+w = "7cm"
+h = "1.5cm"
+line = { color = "D3D3D3", width = 1 }
+align = "center"
+valign = "middle"
+font_size = 12
+color = "1D1D1B"
+text = "value"
+
+[[shapes]]
+type = "rect"
+x = "15cm"
+y = "8.6cm"
+w = "7cm"
+h = "1.5cm"
+line = { color = "D3D3D3", width = 1 }
+align = "center"
+valign = "middle"
+font_size = 12
+color = "1D1D1B"
+text = "value"
+
+[[shapes]]
+type = "rect"
+x = "22cm"
+y = "8.6cm"
+w = "7cm"
+h = "1.5cm"
+line = { color = "D3D3D3", width = 1 }
+align = "center"
+valign = "middle"
+font_size = 12
+color = "1D1D1B"
+text = "value"
+
+# Takeaway: so-what + now-what, one line.
+[[shapes]]
+type = "text"
+x = "1cm"
+y = "15.9cm"
+w = "31.8cm"
+h = "1.1cm"
+align = "center"
+font_size = 16
+bold = true
+color = "0000FF"
+text = "TODO: so-what and now-what, ideally within 50 characters"
+
+[[shapes]]
+type = "text"
+x = "1cm"
+y = "17.1cm"
+w = "31.8cm"
+h = "0.5cm"
+font_size = 10.5
+italic = true
+color = "A3A3A3"
+text = "TODO: source reference"

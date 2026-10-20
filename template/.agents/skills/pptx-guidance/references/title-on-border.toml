@@ -1,0 +1,108 @@
+# Label + content boxes, label-riding-the-top-edge variant: the label is
+# #0000ff bold 14/16pt, white fill, no border, straddling the top edge of a
+# round_rect (#d3d3d3 border, no fill, rect_radius 0.1). Keep the label
+# narrow so there is little dead space.
+# Master: "content". Copy into slides/ and list in a [[sections]] entry.
+
+master = "content"
+
+[[shapes]]
+type = "text"
+placeholder = "title"
+text = "TODO: Title - an observation plus what it implies"
+
+# Example 1.
+[[shapes]]
+type = "round_rect"
+x = "1.5cm"
+y = "4.2cm"
+w = "14.5cm"
+h = "5.2cm"
+line = { color = "D3D3D3", width = 1 }
+rect_radius = 0.1
+
+[[shapes]]
+type = "text"
+x = "1.7cm"
+y = "3.7cm"
+w = "7cm"
+h = "0.8cm"
+fill = { color = "FFFFFF" }
+line = { type = "none" }
+align = "left"
+valign = "middle"
+font_size = 14
+bold = true
+color = "0000FF"
+text = "Label as a claim"
+
+[[shapes]]
+type = "text"
+x = "2cm"
+y = "4.9cm"
+w = "13.5cm"
+h = "4cm"
+font_size = 12
+color = "1D1D1B"
+valign = "top"
+text = "- Supporting point one\n- Supporting point two\n- Supporting point three"
+
+# Example 2.
+[[shapes]]
+type = "round_rect"
+x = "17cm"
+y = "4.2cm"
+w = "14.5cm"
+h = "5.2cm"
+line = { color = "D3D3D3", width = 1 }
+rect_radius = 0.1
+
+[[shapes]]
+type = "text"
+x = "17.2cm"
+y = "3.7cm"
+w = "7cm"
+h = "0.8cm"
+fill = { color = "FFFFFF" }
+line = { type = "none" }
+align = "left"
+valign = "middle"
+font_size = 14
+bold = true
+color = "0000FF"
+text = "Labels are not keywords"
+
+[[shapes]]
+type = "text"
+x = "17.5cm"
+y = "4.9cm"
+w = "13.5cm"
+h = "4cm"
+font_size = 12
+color = "1D1D1B"
+valign = "top"
+text = "- Supporting point one\n- Supporting point two\n- Supporting point three"
+
+# Takeaway: so-what + now-what, one line.
+[[shapes]]
+type = "text"
+x = "1cm"
+y = "15.9cm"
+w = "31.8cm"
+h = "1.1cm"
+align = "center"
+font_size = 16
+bold = true
+color = "0000FF"
+text = "TODO: so-what and now-what, ideally within 50 characters"
+
+[[shapes]]
+type = "text"
+x = "1cm"
+y = "17.1cm"
+w = "31.8cm"
+h = "0.5cm"
+font_size = 10.5
+italic = true
+color = "A3A3A3"
+text = "TODO: source reference"
