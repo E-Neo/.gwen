@@ -1,0 +1,15 @@
+# The cover slide is for title and author only
+
+master = "cover"
+
+[[shapes]]
+type = "text"
+placeholder = "title"
+text = "TODO: Title"
+
+[[shapes]]
+type = "text"
+placeholder = "author"
+text = """
+[Gwen](https://github.com/E-Neo/gwen)
+"""

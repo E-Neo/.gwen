@@ -1,0 +1,18 @@
+[[shapes]]
+type = "text"
+color = "1D1D1A"
+font_face = "Arial"
+font_size = 48
+h = "7.82cm"
+w = "11.07cm"
+x = "1.72cm"
+y = "4.08cm"
+text = 'Thank you.'
+
+[[shapes]]
+type = "image"
+src = "media/logo.svg"
+h = "1.13cm"
+w = "5.21cm"
+x = "22.15cm"
+y = "14.55cm"

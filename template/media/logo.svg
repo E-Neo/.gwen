@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="256" viewBox="0 0 512 128" fill="none">
+  <defs>
+    <linearGradient id="gwenGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6C5CE7"/>
+      <stop offset="100%" stop-color="#A29BFE"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Icon: three stacked slides representing a deck -->
+  <g>
+    <!-- Back slide -->
+    <rect x="44" y="16" width="80" height="70" rx="12" fill="#A29BFE" opacity="0.35"/>
+    <!-- Middle slide -->
+    <rect x="32" y="28" width="80" height="70" rx="12" fill="#A29BFE" opacity="0.6"/>
+    <!-- Front slide -->
+    <rect x="20" y="40" width="80" height="70" rx="12" fill="url(#gwenGrad)"/>
+
+    <!-- Opening bracket [ -->
+    <path d="M48 58 L40 58 L40 92 L48 92" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+    <!-- Closing bracket ] -->
+    <path d="M72 58 L80 58 L80 92 L72 92" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+    <!-- First content line -->
+    <path d="M48 68 L72 68" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+    <!-- Second content line -->
+    <path d="M48 82 L72 82" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+  </g>
+
+  <!-- Wordmark "Gwen" -->
+  <g stroke="#1A1A2E" stroke-width="10" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+
+    <!-- G -->
+    <path d="M226 20
+             C218 12, 206 8, 195 8
+             C172 8, 158 23, 158 43
+             C158 63, 172 78, 195 78
+             C215 78, 226 71, 226 58
+             L226 43
+             L196 43"/>
+
+    <!-- w -->
+    <path d="M248 28 L269 78 L291 46 L312 78 L334 28"/>
+
+    <!-- e -->
+    <path d="M418 64
+             C416 72, 406 80, 392 80
+             C370 80, 356 68, 356 52
+             C356 36, 370 24, 392 24
+             C406 24, 418 34, 418 52
+             L360 52"/>
+
+    <!-- n -->
+    <path d="M440 78 L440 40 C440 32, 447 28, 459 28 C479 28, 494 35, 494 52 L494 78"/>
+  </g>
+
+  <!-- Tagline "TOML → PPTX" -->
+  <g stroke="#8A8A9E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- T -->
+    <path d="M160 96 L186 96 M173 96 L173 120"/>
+    <!-- O -->
+    <path d="M211 96 C203 96, 198 100, 198 108 C198 116, 203 120, 211 120 C219 120, 224 116, 224 108 C224 100, 219 96, 211 96"/>
+    <!-- M -->
+    <path d="M236 120 L236 96 L249 110 L262 96 L262 120"/>
+    <!-- L -->
+    <path d="M274 96 L274 120 L300 120"/>
+    <!-- Arrow -->
+    <path d="M312 108 L344 108 M344 108 L336 101 M344 108 L336 115"/>
+    <!-- P -->
+    <path d="M356 120 L356 96 L368 96 Q382 96, 382 104 Q382 112, 368 112 L356 112"/>
+    <!-- P -->
+    <path d="M394 120 L394 96 L406 96 Q420 96, 420 104 Q420 112, 406 112 L394 112"/>
+    <!-- T -->
+    <path d="M432 96 L458 96 M445 96 L445 120"/>
+    <!-- X -->
+    <path d="M470 96 L496 120 M496 96 L470 120"/>
+  </g>
+</svg>

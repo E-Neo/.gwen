@@ -1,0 +1,6 @@
+master = "content"
+
+[[shapes]]
+type = "text"
+placeholder = "title"
+text = "TODO: Title"

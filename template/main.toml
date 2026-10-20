@@ -1,0 +1,30 @@
+[presentation]
+title = "template"
+height = 6858000
+width = 12196763
+
+[[sections]]
+slides = ["cover.toml"]
+title = "Cover"
+
+[[sections]]
+slides = ["example_content.toml"]
+title = "Content"
+
+[[sections]]
+slides = ["end.toml"]
+title = "End"
+
+[styles.shape]
+margin = 0
+align = "left"
+valign = "top"
+line = { width = 1, color = "D3D3D3" }
+font_face = "Microsoft Yahei"
+
+[styles.text]
+line = { type = "none" }
+
+[theme]
+major_font = "Arial Black"
+minor_font = "Arial"

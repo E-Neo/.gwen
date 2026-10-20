@@ -1,0 +1,36 @@
+[slide_number]
+h = "0.39cm"
+w = "1.39cm"
+x = "2.04cm"
+y = "17.79cm"
+margin = 0
+font_face = "Arial"
+font_size = 9
+color = "1D1D1B"
+locked = true
+
+[[shapes]]
+type = "text"
+h = "0.64cm"
+w = "9.73cm"
+x = "3.04cm"
+y = "17.66cm"
+margin = ["0.13cm", "0.25cm", "0.13cm", "0.25cm"]
+valign = "middle"
+font_face = "Arial"
+font_size = 9
+color = "1D1D1B"
+text = "[E-Neo @ GitHub](https://github.com/E-Neo)"
+
+[[shapes]]
+type = "placeholder"
+name = "title"
+ph_type = "title"
+h = "1cm"
+w = "31cm"
+x = "1cm"
+y = "1cm"
+font_size = 24
+color = "C7000A"
+bold = true
+text = "TODO: Title"
