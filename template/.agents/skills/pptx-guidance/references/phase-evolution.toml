@@ -191,7 +191,7 @@ w = "11.2cm"
 h = "7.1cm"
 styles = "card_body"
 text = """- **Formula:** observation + what it implies
-- **Quantify:** "TPS up 5x", "cost down 50%"
+- **Quantify:** "TPS 5×↑", "cost 50%↓"
 - **Length:** one line if you can
 - **Watch out:** a keyword is not a title
 - **Serves:** the reader who only reads the title"""

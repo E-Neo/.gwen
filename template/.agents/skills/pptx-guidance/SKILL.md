@@ -10,6 +10,26 @@ A deck must have "logic" - logic here usually means a *story* that reads
 smoothly and holds together. A deck is not a flat list of facts: it should
 combine objective facts with a point of view on trends.
 
+## Research
+
+Keep the research, not just the deck. Every fact that reaches a slide should be
+traceable back to something you wrote down.
+
+- **`references/` is the source of truth.** When you search the web, write what
+  you found into Markdown files under the project's `references/` - links,
+  quotes, dates, and the numbers you extracted, with the question you were
+  answering at the top of each file. Write slides from those files, not from
+  memory: a later reader must be able to re-check a claim without repeating the
+  search.
+- **`references/media/` holds the raw material.** Screenshots, diagrams and
+  charts collected while researching go there, each with its origin recorded in
+  the Markdown file that cites it.
+- **`media/` holds only what ships.** Copy an asset into `media/` when a slide
+  actually uses it, so the build depends on nothing outside the project.
+
+These are the project's paths, not this skill's: `references/` next to this file
+holds layout examples, not research.
+
 ## Overall structure
 
 A complete deck usually contains a cover, chapter pages, and an end page.
@@ -43,11 +63,11 @@ observation implies". A topic keyword is not a title.
     information, and many readers only ever read the title - if the title is
     weak, the slide is lost.
 - Good: "NV adds a G3.5 layer - GPU connects to remote storage directly to
-  accelerate inference, long-context Agent workloads see TPS up 5x"
+  accelerate inference, long-context Agent workloads see TPS 5×↑"
   - Why: it names the observation ("NV adds a G3.5 layer"), briefly explains
     the new term (GPU connecting to remote storage to accelerate inference),
     then says what it means and what it's worth. Quantify whenever possible
-    ("TPS up 5x", "cost down 50%").
+    ("TPS 5×↑", "cost 50%↓").
 
 Default title style: 24pt bold red (`C7000A`), left-aligned, at the top of
 the slide, ideally a single line.
@@ -107,6 +127,37 @@ patterns:
   the table. See the third frame of
   [`references/frames.toml`](references/frames.toml).
 
+### Numbers
+
+A number is the strongest thing on a slide, so it has to be earned twice.
+
+- **Every quantified number carries a source.** A figure with no source is a
+  guess the reader cannot check. Name the source in the `source` style
+  (10.5pt grey italic) on the slide, and keep the supporting detail in
+  `references/`.
+- **Never let a number stand alone.** A big bold figure floating in the middle
+  of a card or frame says nothing: no unit, no comparison, no consequence. Put
+  it in a sentence that gives what it measures, what it is compared with, and
+  what follows from it.
+- **Write change as value + arrow + dimension.** The arrow always sits
+  immediately after the value; the word after it names the dimension that
+  moved. Drop "up" and "down" - the arrow already says the direction.
+  - `TPS 5×↑`, `5×↑ faster`, `50%↓ cheaper`, `latency 40%↓`,
+    `tokens 3×↑ per request`.
+  - Multiples take `×`, shares take `%`; keep the unit attached. Dimensions
+    such as `33.88 x 19.05cm` are not changes and keep their plain `x`.
+  - An arrow states direction, not good news: `error rate 5%↑` is bad,
+    `cost 50%↓` is good. The dimension word has to make clear which one you
+    mean.
+- **Emphasize inside the sentence.** Bold red or blue on the value and arrow is
+  fine - **5×↑** - but the sentence does the work, not the type size.
+- **Bad:** a card containing `5×↑` and the label "faster".
+- **Good:** "Long-context Agent inference runs **5×↑** faster once the GPU
+  reads remote storage directly." (source: ...)
+
+Numbers must agree wherever they appear - title, body, takeaway, `references/`.
+Round the same way each time, and do not silently swap one metric for another.
+
 ### Layout principles
 
 - **Balance and symmetry.** Work out the geometry against the slide size: a
@@ -146,3 +197,52 @@ half summarizes the trend, the second half suggests a direction.
 
 Default takeaway style: 16pt bold blue (`#0000ff`), horizontally centered,
 ideally a single line of at most 50 characters.
+
+## Review
+
+A page is finished when the measure says it is dense, the logic says it holds,
+and your eyes say it draws cleanly - in that order.
+
+### Density first
+
+Run `gwen measure` before you open the rendered deck. It reports composition and
+content facts per slide, so a half-empty region shows up as a number instead of
+something you miss while skimming.
+
+```sh
+gwen measure            # every slide
+gwen measure --page 4   # one slide while iterating
+```
+
+Empty space is not "clean" or "breathing room": read `whitespace`, `largest_void`
+and `density` - a large void away from the edges, or a page much less dense than
+the rest of the deck, is the empty space you would have missed by eye. Fill it
+with evidence, a second column, an annotation or a wider panel - then measure
+again. Open the `.pptx` only once the numbers look right; measure finds
+emptiness, your eyes find collisions, overflow and bad line breaks.
+
+### The logic pass
+
+Reading order is the reader's only path through the page. After every edit, read
+the deck top to bottom and test three levels:
+
+- **Sentence.** Does each sentence follow from the one before it? A claim needs
+  its evidence within reach.
+- **Page.** Does every element serve the title, and does the body land on the
+  takeaway? Anything that does not carry the thread is cut or moved, not
+  decorated.
+- **Deck.** Do the pages build macro -> micro -> macro, without repeating or
+  contradicting each other?
+
+Two failures to hunt for:
+
+- **Internal inconsistency.** A figure, name or claim means the same thing
+  everywhere, in every slide and in the sources. If two pages disagree, one of
+  them is wrong.
+- **Unpaid setups.** Raise it or drop it. A term, example or question you
+  mention and never develop leaves the reader waiting; a mention you do not pay
+  off is worse than no mention. Define an obscure term in a few words the first
+  time it appears, before you argue with it.
+
+Then read it again. The logic of each sentence, each page and the whole deck is
+polished, not written.
