@@ -1,6 +1,8 @@
-# Layered block diagram: a software stack as stacked boxes, each layer
-# carrying its own inner boxes. Red numbered markers ➊➋➌ point at the key
-# layers and are expanded in the right-hand notes.
+# Stack as a worked methodology example: the stack is the anatomy of a slide
+# (Title / Body / Takeaway / Layout / Palette). Circled numbers sit on
+# technique boxes - not layers - and the right column explains each technique.
+# All layers are grey; red is the single accent (the markers).
+# Slide is 33.88 x 19.05cm; left stack 1.5-16.0cm, right column 18.0-32.5cm.
 # Master: "content". Copy into slides/ and list in a [[sections]] entry.
 
 master = "content"
@@ -10,281 +12,488 @@ type = "text"
 placeholder = "title"
 text = "TODO: Title - an observation plus what it implies"
 
-# Right-hand notes expanding the marked layers.
-[[shapes]]
-type = "text"
-x = "23cm"
-y = "4cm"
-w = "9.5cm"
-h = "8cm"
-font_size = 12
-color = "1D1D1B"
-valign = "top"
-text = "- ➊ Model/Agent: reason and act across tools\n- ➋ AI Infra: training, serving, data plumbing\n- ➌ Hardware: accelerators set the cost curve"
-
-# Layer 1: Model / Agent.
+# ---- Left: the stack ----
 [[shapes]]
 type = "rect"
 x = "1.5cm"
-y = "7.6cm"
-w = "20cm"
-h = "2.4cm"
+y = "2.7cm"
+w = "14.5cm"
+h = "3.2cm"
 fill = { color = "F2F2F2" }
-line = { color = "D3D3D3", width = 1 }
+line = { color = "BFBFBF", width = 1 }
 
 [[shapes]]
 type = "text"
-x = "2.2cm"
-y = "7.7cm"
-w = "8cm"
-h = "0.6cm"
-font_size = 13
-bold = true
-color = "1D1D1B"
-text = "Model / Agent"
-
-[[shapes]]
-type = "rect"
-x = "2.2cm"
-y = "8.7cm"
-w = "5.8cm"
-h = "1.2cm"
-fill = { color = "FFFFFF" }
-line = { color = "D3D3D3", width = 1 }
-align = "center"
-valign = "middle"
-font_size = 11
-color = "1D1D1B"
-text = "Coding"
-
-[[shapes]]
-type = "rect"
-x = "8.4cm"
-y = "8.7cm"
-w = "5.8cm"
-h = "1.2cm"
-fill = { color = "FFFFFF" }
-line = { color = "D3D3D3", width = 1 }
-align = "center"
-valign = "middle"
-font_size = 11
-color = "1D1D1B"
-text = "Office"
-
-[[shapes]]
-type = "rect"
-x = "14.6cm"
-y = "8.7cm"
-w = "5.8cm"
-h = "1.2cm"
-fill = { color = "FFFFFF" }
-line = { color = "D3D3D3", width = 1 }
-align = "center"
-valign = "middle"
-font_size = 11
-color = "1D1D1B"
-text = "Finance"
-
-# Layer 2: AI Infra.
-[[shapes]]
-type = "rect"
-x = "1.5cm"
-y = "10.4cm"
-w = "20cm"
-h = "2.4cm"
-fill = { color = "F2F2F2" }
-line = { color = "D3D3D3", width = 1 }
-
-[[shapes]]
-type = "text"
-x = "2.2cm"
-y = "10.5cm"
-w = "8cm"
-h = "0.6cm"
-font_size = 13
-bold = true
-color = "1D1D1B"
-text = "AI Infra"
-
-[[shapes]]
-type = "rect"
-x = "2.2cm"
-y = "11.5cm"
-w = "5.8cm"
-h = "1.2cm"
-fill = { color = "FFFFFF" }
-line = { color = "D3D3D3", width = 1 }
-align = "center"
-valign = "middle"
-font_size = 11
-color = "1D1D1B"
-text = "Training"
-
-[[shapes]]
-type = "rect"
-x = "8.4cm"
-y = "11.5cm"
-w = "5.8cm"
-h = "1.2cm"
-fill = { color = "FFFFFF" }
-line = { color = "D3D3D3", width = 1 }
-align = "center"
-valign = "middle"
-font_size = 11
-color = "1D1D1B"
-text = "Serving"
-
-[[shapes]]
-type = "rect"
-x = "14.6cm"
-y = "11.5cm"
-w = "5.8cm"
-h = "1.2cm"
-fill = { color = "FFFFFF" }
-line = { color = "D3D3D3", width = 1 }
-align = "center"
-valign = "middle"
-font_size = 11
-color = "1D1D1B"
-text = "Data"
-
-# Layer 3: Hardware.
-[[shapes]]
-type = "rect"
-x = "1.5cm"
-y = "13.2cm"
-w = "20cm"
-h = "2.4cm"
-fill = { color = "F2F2F2" }
-line = { color = "D3D3D3", width = 1 }
-
-[[shapes]]
-type = "text"
-x = "2.2cm"
-y = "13.3cm"
-w = "8cm"
-h = "0.6cm"
-font_size = 13
-bold = true
-color = "1D1D1B"
-text = "Hardware"
-
-[[shapes]]
-type = "rect"
-x = "2.2cm"
-y = "14.3cm"
-w = "4.35cm"
-h = "1.2cm"
-fill = { color = "FFFFFF" }
-line = { color = "D3D3D3", width = 1 }
-align = "center"
-valign = "middle"
-font_size = 11
-color = "1D1D1B"
-text = "GPU"
-
-[[shapes]]
-type = "rect"
-x = "6.75cm"
-y = "14.3cm"
-w = "4.35cm"
-h = "1.2cm"
-fill = { color = "FFFFFF" }
-line = { color = "D3D3D3", width = 1 }
-align = "center"
-valign = "middle"
-font_size = 11
-color = "1D1D1B"
-text = "TPU"
-
-[[shapes]]
-type = "rect"
-x = "11.3cm"
-y = "14.3cm"
-w = "4.35cm"
-h = "1.2cm"
-fill = { color = "FFFFFF" }
-line = { color = "D3D3D3", width = 1 }
-align = "center"
-valign = "middle"
-font_size = 11
-color = "1D1D1B"
-text = "NPU"
-
-[[shapes]]
-type = "rect"
-x = "15.85cm"
-y = "14.3cm"
-w = "4.35cm"
-h = "1.2cm"
-fill = { color = "FFFFFF" }
-line = { color = "D3D3D3", width = 1 }
-align = "center"
-valign = "middle"
-font_size = 11
-color = "1D1D1B"
-text = "CPU"
-
-# Red markers ➊➋➌ on the layers, linked to the right-hand notes.
-[[shapes]]
-type = "text"
-x = "21.8cm"
-y = "8cm"
-w = "1cm"
-h = "1.6cm"
-align = "center"
-valign = "middle"
-font_size = 18
-bold = true
-color = "C7000A"
-text = "➊"
-
-[[shapes]]
-type = "text"
-x = "21.8cm"
-y = "10.8cm"
-w = "1cm"
-h = "1.6cm"
-align = "center"
-valign = "middle"
-font_size = 18
-bold = true
-color = "C7000A"
-text = "➋"
-
-[[shapes]]
-type = "text"
-x = "21.8cm"
-y = "13.6cm"
-w = "1cm"
-h = "1.6cm"
-align = "center"
-valign = "middle"
-font_size = 18
-bold = true
-color = "C7000A"
-text = "➌"
-
-# Takeaway: so-what + now-what, one line.
-[[shapes]]
-type = "text"
-x = "1cm"
-y = "15.9cm"
-w = "31.8cm"
-h = "1.1cm"
-align = "center"
-font_size = 16
-bold = true
-color = "0000FF"
-text = "TODO: so-what and now-what, ideally within 50 characters"
-
-[[shapes]]
-type = "text"
-x = "1cm"
-y = "17.1cm"
-w = "31.8cm"
+x = "2.3cm"
+y = "2.8cm"
+w = "12cm"
 h = "0.5cm"
+text = "**THE TITLE**"
 font_size = 10.5
-italic = true
-color = "A3A3A3"
-text = "TODO: source reference"
+color = "595959"
+margin = 0
+
+[[shapes]]
+type = "rect"
+x = "2.6cm"
+y = "3.6cm"
+w = "3.6cm"
+h = "1.6cm"
+fill = { color = "FFFFFF" }
+line = { color = "BFBFBF", width = 1 }
+text = "**Claim**"
+font_size = 11.5
+color = "1D1D1B"
+align = "center"
+valign = "middle"
+margin = 0
+
+[[shapes]]
+type = "rect"
+x = "6.6cm"
+y = "3.6cm"
+w = "3.6cm"
+h = "1.6cm"
+fill = { color = "FFFFFF" }
+line = { color = "BFBFBF", width = 1 }
+text = "**Quantify**"
+font_size = 11.5
+color = "1D1D1B"
+align = "center"
+valign = "middle"
+margin = 0
+
+[[shapes]]
+type = "rect"
+x = "10.6cm"
+y = "3.6cm"
+w = "3.6cm"
+h = "1.6cm"
+fill = { color = "FFFFFF" }
+line = { color = "BFBFBF", width = 1 }
+text = "**One line**"
+font_size = 11.5
+color = "1D1D1B"
+align = "center"
+valign = "middle"
+margin = 0
+
+# Marker 1 on the Claim box.
+[[shapes]]
+type = "ellipse"
+x = "8.05cm"
+y = "3.35cm"
+w = "0.7cm"
+h = "0.7cm"
+fill = { color = "C7000A" }
+line = { type = "none" }
+text = "**1**"
+font_size = 11
+color = "FFFFFF"
+align = "center"
+valign = "middle"
+margin = 0
+
+[[shapes]]
+type = "rect"
+x = "1.5cm"
+y = "6.1cm"
+w = "14.5cm"
+h = "3cm"
+fill = { color = "F2F2F2" }
+line = { color = "BFBFBF", width = 1 }
+
+[[shapes]]
+type = "text"
+x = "2.3cm"
+y = "6.2cm"
+w = "12cm"
+h = "0.5cm"
+text = "**THE BODY**"
+font_size = 10.5
+color = "595959"
+margin = 0
+
+[[shapes]]
+type = "rect"
+x = "2.6cm"
+y = "7cm"
+w = "3.6cm"
+h = "1.6cm"
+fill = { color = "FFFFFF" }
+line = { color = "BFBFBF", width = 1 }
+text = "**One logic**"
+font_size = 11.5
+color = "1D1D1B"
+align = "center"
+valign = "middle"
+margin = 0
+
+[[shapes]]
+type = "rect"
+x = "6.6cm"
+y = "7cm"
+w = "3.6cm"
+h = "1.6cm"
+fill = { color = "FFFFFF" }
+line = { color = "BFBFBF", width = 1 }
+text = "**Dense**"
+font_size = 11.5
+color = "1D1D1B"
+align = "center"
+valign = "middle"
+margin = 0
+
+[[shapes]]
+type = "rect"
+x = "10.6cm"
+y = "7cm"
+w = "3.6cm"
+h = "1.6cm"
+fill = { color = "FFFFFF" }
+line = { color = "BFBFBF", width = 1 }
+text = "**Sources**"
+font_size = 11.5
+color = "1D1D1B"
+align = "center"
+valign = "middle"
+margin = 0
+
+# Marker 2 on the One logic box.
+[[shapes]]
+type = "ellipse"
+x = "8.05cm"
+y = "6.75cm"
+w = "0.7cm"
+h = "0.7cm"
+fill = { color = "C7000A" }
+line = { type = "none" }
+text = "**2**"
+font_size = 11
+color = "FFFFFF"
+align = "center"
+valign = "middle"
+margin = 0
+
+[[shapes]]
+type = "rect"
+x = "1.5cm"
+y = "9.3cm"
+w = "14.5cm"
+h = "1.5cm"
+fill = { color = "F2F2F2" }
+line = { color = "BFBFBF", width = 1 }
+
+[[shapes]]
+type = "text"
+x = "2.3cm"
+y = "9.3cm"
+w = "4.5cm"
+h = "1.5cm"
+text = "**TAKEAWAY**"
+font_size = 10.5
+color = "595959"
+valign = "middle"
+margin = 0
+
+[[shapes]]
+type = "text"
+x = "6cm"
+y = "9.3cm"
+w = "9cm"
+h = "1.5cm"
+text = "So-what + now-what"
+font_size = 11.5
+color = "1D1D1B"
+valign = "middle"
+margin = 0
+
+# Marker 3 on the takeaway.
+[[shapes]]
+type = "ellipse"
+x = "10.05cm"
+y = "9.05cm"
+w = "0.7cm"
+h = "0.7cm"
+fill = { color = "C7000A" }
+line = { type = "none" }
+text = "**3**"
+font_size = 11
+color = "FFFFFF"
+align = "center"
+valign = "middle"
+margin = 0
+
+[[shapes]]
+type = "rect"
+x = "1.5cm"
+y = "11cm"
+w = "14.5cm"
+h = "1.5cm"
+fill = { color = "F2F2F2" }
+line = { color = "BFBFBF", width = 1 }
+
+[[shapes]]
+type = "text"
+x = "2.3cm"
+y = "11cm"
+w = "4.5cm"
+h = "1.5cm"
+text = "**THE LAYOUT**"
+font_size = 10.5
+color = "595959"
+valign = "middle"
+margin = 0
+
+[[shapes]]
+type = "text"
+x = "6cm"
+y = "11cm"
+w = "9cm"
+h = "1.5cm"
+text = "Symmetric columns · computed geometry · margins"
+font_size = 11.5
+color = "1D1D1B"
+valign = "middle"
+margin = 0
+
+[[shapes]]
+type = "rect"
+x = "1.5cm"
+y = "12.7cm"
+w = "14.5cm"
+h = "1.5cm"
+fill = { color = "F2F2F2" }
+line = { color = "BFBFBF", width = 1 }
+
+[[shapes]]
+type = "text"
+x = "2.3cm"
+y = "12.7cm"
+w = "4.5cm"
+h = "1.5cm"
+text = "**THE PALETTE**"
+font_size = 10.5
+color = "595959"
+valign = "middle"
+margin = 0
+
+[[shapes]]
+type = "text"
+x = "6cm"
+y = "12.7cm"
+w = "9cm"
+h = "1.5cm"
+text = "Black white grey - red blue for emphasis"
+font_size = 11.5
+color = "1D1D1B"
+valign = "middle"
+margin = 0
+
+# Bottom note so the left half reads as a deliberate column.
+[[shapes]]
+type = "rect"
+x = "1.5cm"
+y = "14.5cm"
+w = "14.5cm"
+h = "1.2cm"
+fill = { color = "F7F7F7" }
+line = { color = "E0E0E0", width = 1 }
+
+[[shapes]]
+type = "text"
+x = "2.3cm"
+y = "14.5cm"
+w = "12.9cm"
+h = "1.2cm"
+font_size = 10.5
+color = "1D1D1B"
+valign = "middle"
+margin = [2, 6, 2, 6]
+text = "**Some readers see only the title and the takeaway** - make both claims."
+
+# ---- Middle: rotated perspective floor as the separator ----
+# The SVG is 258x30 (wide). Rotated 270 the long (wide) edge points at the
+# details on the right and the short edge at the stack on the left.
+[[shapes]]
+type = "image"
+src = "media/perspective-floor.svg"
+x = "11.45cm"
+y = "8.85cm"
+w = "11cm"
+h = "1.3cm"
+rotate = 270
+
+# ---- Right: the annotated techniques ----
+[[shapes]]
+type = "text"
+x = "18cm"
+y = "2.75cm"
+w = "14.5cm"
+h = "0.55cm"
+text = "**THREE TECHNIQUES**"
+font_size = 10.5
+color = "595959"
+margin = 0
+
+[[shapes]]
+type = "ellipse"
+x = "18cm"
+y = "3.4cm"
+w = "0.8cm"
+h = "0.8cm"
+fill = { color = "C7000A" }
+line = { type = "none" }
+text = "**1**"
+font_size = 11
+color = "FFFFFF"
+align = "center"
+valign = "middle"
+margin = 0
+
+[[shapes]]
+type = "text"
+x = "19.1cm"
+y = "3.3cm"
+w = "13.4cm"
+h = "0.9cm"
+text = "A claim, not a keyword"
+font_size = 13.5
+bold = true
+color = "1D1D1B"
+margin = 0
+
+[[shapes]]
+type = "text"
+x = "19.1cm"
+y = "4.2cm"
+w = "13.4cm"
+h = "1.8cm"
+text = "Observation + implication, quantified when possible - a topic keyword carries no information for a scanning reader."
+font_size = 11.5
+color = "1D1D1B"
+margin = 0
+
+[[shapes]]
+type = "rect"
+x = "18cm"
+y = "6.1cm"
+w = "14.5cm"
+h = "0.04cm"
+fill = { color = "D9D9D9" }
+line = { type = "none" }
+
+[[shapes]]
+type = "ellipse"
+x = "18cm"
+y = "6.5cm"
+w = "0.8cm"
+h = "0.8cm"
+fill = { color = "C7000A" }
+line = { type = "none" }
+text = "**2**"
+font_size = 11
+color = "FFFFFF"
+align = "center"
+valign = "middle"
+margin = 0
+
+[[shapes]]
+type = "text"
+x = "19.1cm"
+y = "6.4cm"
+w = "13.4cm"
+h = "0.9cm"
+text = "One logical thread per page"
+font_size = 13.5
+bold = true
+color = "1D1D1B"
+margin = 0
+
+[[shapes]]
+type = "text"
+x = "19.1cm"
+y = "7.3cm"
+w = "13.4cm"
+h = "1.8cm"
+text = "Every item in the body supports the title and the takeaway; nothing is decoration for its own sake."
+font_size = 11.5
+color = "1D1D1B"
+margin = 0
+
+[[shapes]]
+type = "rect"
+x = "18cm"
+y = "9.2cm"
+w = "14.5cm"
+h = "0.04cm"
+fill = { color = "D9D9D9" }
+line = { type = "none" }
+
+[[shapes]]
+type = "ellipse"
+x = "18cm"
+y = "9.6cm"
+w = "0.8cm"
+h = "0.8cm"
+fill = { color = "C7000A" }
+line = { type = "none" }
+text = "**3**"
+font_size = 11
+color = "FFFFFF"
+align = "center"
+valign = "middle"
+margin = 0
+
+[[shapes]]
+type = "text"
+x = "19.1cm"
+y = "9.5cm"
+w = "13.4cm"
+h = "0.9cm"
+text = "Land the takeaway"
+font_size = 13.5
+bold = true
+color = "1D1D1B"
+margin = 0
+
+[[shapes]]
+type = "text"
+x = "19.1cm"
+y = "10.4cm"
+w = "13.4cm"
+h = "1.8cm"
+text = "so-what + now-what in 16pt bold blue, centred, one line of at most 50 characters."
+font_size = 11.5
+color = "1D1D1B"
+margin = 0
+
+[[shapes]]
+type = "rect"
+x = "18cm"
+y = "12.4cm"
+w = "14.5cm"
+h = "3.2cm"
+fill = { color = "F7F7F7" }
+line = { color = "E0E0E0", width = 1 }
+
+[[shapes]]
+type = "text"
+x = "18cm"
+y = "12.4cm"
+w = "14.5cm"
+h = "3.2cm"
+text = "**Rule:** annotate the component that carries the argument - explain it next to the stack, not the whole layer."
+font_size = 11.5
+color = "1D1D1B"
+valign = "middle"
+margin = [8, 10, 8, 10]
+
+[[shapes]]
+type = "text"
+x = "1.5cm"
+y = "16.25cm"
+w = "30.9cm"
+h = "0.9cm"
+styles = "insight"
+text = "A slide is Title + Body + Takeaway; layout is computed, not eyeballed."

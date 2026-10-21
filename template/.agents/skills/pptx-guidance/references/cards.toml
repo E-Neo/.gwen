@@ -1,0 +1,467 @@
+# Cards + staircase as a worked methodology example: the equal-width card
+# pattern (card_header + card_body) arranged as a staircase of writing
+# principles (Claim -> Structure -> Geometry -> Review). A framing band on
+# top, four step-cards rising left to right on the y=15.55 baseline, each
+# with a centered header subtitle. The top-left annotation fills the diagonal
+# corner instead of leaving it empty.
+# Master: "content". Copy into slides/ and list in a [[sections]] entry.
+
+master = "content"
+
+[[shapes]]
+type = "text"
+placeholder = "title"
+text = "TODO: Title - an observation plus what it implies"
+
+# Framing band stating the single logical thread.
+[[shapes]]
+type = "rect"
+x = "1.5cm"
+y = "2.5cm"
+w = "30.9cm"
+h = "1.3cm"
+fill = { color = "F7F7F7" }
+line = { type = "none" }
+
+[[shapes]]
+type = "text"
+x = "1.5cm"
+y = "2.5cm"
+w = "30.9cm"
+h = "1.3cm"
+text = "**Every principle builds on the previous one** - from the title claim to a slide that reads at a glance."
+font_size = 13
+color = "1D1D1B"
+valign = "middle"
+margin = ["0.1cm", "0.4cm", "0.1cm", "0.4cm"]
+
+# Baseline the steps stand on.
+[[shapes]]
+type = "rect"
+x = "1.5cm"
+y = "15.55cm"
+w = "30.9cm"
+h = "0.05cm"
+fill = { color = "A6A6A6" }
+line = { type = "none" }
+
+# Annotation filling the empty top-left diagonal: the staircase leaves a
+# blank corner above the lower steps - use it, don't leave it empty.
+[[shapes]]
+type = "text"
+x = "2cm"
+y = "4.3cm"
+w = "6.5cm"
+h = "2.4cm"
+font_size = 11.5
+color = "1D1D1B"
+valign = "top"
+margin = 0
+text = """**Read the diagonal:**
+each step inherits the one before."""
+
+# Curved arrows in the open diagonal: each starts above the middle of the
+# current step's top edge and curves up-right to above the next step's
+# top-left corner. Endpoints are exact (bezier polyline + triangle head);
+# labels name what each step adds.
+# Arrow 1 -> 2: starts above the middle of the current top edge,
+# curves to above the next step's top-left corner; polyline + head,
+# so both endpoints are exact.
+[[shapes]]
+type = "line"
+x = "5.6cm"
+y = "10.5cm"
+w = "0.365cm"
+h = "-0.314cm"
+line = { color = "A6A6A6", width = 2 }
+
+[[shapes]]
+type = "line"
+x = "5.965cm"
+y = "10.186cm"
+w = "0.379cm"
+h = "-0.28cm"
+line = { color = "A6A6A6", width = 2 }
+
+[[shapes]]
+type = "line"
+x = "6.344cm"
+y = "9.906cm"
+w = "0.394cm"
+h = "-0.246cm"
+line = { color = "A6A6A6", width = 2 }
+
+[[shapes]]
+type = "line"
+x = "6.738cm"
+y = "9.66cm"
+w = "0.408cm"
+h = "-0.212cm"
+line = { color = "A6A6A6", width = 2 }
+
+[[shapes]]
+type = "line"
+x = "7.146cm"
+y = "9.448cm"
+w = "0.422cm"
+h = "-0.178cm"
+line = { color = "A6A6A6", width = 2 }
+
+[[shapes]]
+type = "line"
+x = "7.568cm"
+y = "9.27cm"
+w = "0.437cm"
+h = "-0.144cm"
+line = { color = "A6A6A6", width = 2 }
+
+[[shapes]]
+type = "line"
+x = "8.004cm"
+y = "9.127cm"
+w = "0.451cm"
+h = "-0.11cm"
+line = { color = "A6A6A6", width = 2 }
+
+[[shapes]]
+type = "line"
+x = "8.455cm"
+y = "9.017cm"
+w = "0.465cm"
+h = "-0.076cm"
+line = { color = "A6A6A6", width = 2 }
+
+[[shapes]]
+type = "line"
+x = "8.92cm"
+y = "8.941cm"
+w = "0.48cm"
+h = "-0.041cm"
+line = { color = "A6A6A6", width = 2 }
+
+[[shapes]]
+type = "triangle"
+x = "8.926cm"
+y = "8.694cm"
+w = "0.5cm"
+h = "0.45cm"
+fill = { color = "A6A6A6" }
+line = { type = "none" }
+rotate = 85.1
+
+[[shapes]]
+type = "text"
+x = "5.3cm"
+y = "7.4cm"
+w = "4.4cm"
+h = "0.5cm"
+font_size = 10
+color = "595959"
+align = "center"
+valign = "middle"
+margin = 0
+text = "adds one logic"
+# Arrow 2 -> 3: starts above the middle of the current top edge,
+# curves to above the next step's top-left corner; polyline + head,
+# so both endpoints are exact.
+[[shapes]]
+type = "line"
+x = "13.0cm"
+y = "8.9cm"
+w = "0.365cm"
+h = "-0.314cm"
+line = { color = "A6A6A6", width = 2 }
+
+[[shapes]]
+type = "line"
+x = "13.365cm"
+y = "8.586cm"
+w = "0.379cm"
+h = "-0.28cm"
+line = { color = "A6A6A6", width = 2 }
+
+[[shapes]]
+type = "line"
+x = "13.744cm"
+y = "8.306cm"
+w = "0.394cm"
+h = "-0.246cm"
+line = { color = "A6A6A6", width = 2 }
+
+[[shapes]]
+type = "line"
+x = "14.138cm"
+y = "8.06cm"
+w = "0.408cm"
+h = "-0.212cm"
+line = { color = "A6A6A6", width = 2 }
+
+[[shapes]]
+type = "line"
+x = "14.546cm"
+y = "7.848cm"
+w = "0.422cm"
+h = "-0.178cm"
+line = { color = "A6A6A6", width = 2 }
+
+[[shapes]]
+type = "line"
+x = "14.968cm"
+y = "7.67cm"
+w = "0.437cm"
+h = "-0.144cm"
+line = { color = "A6A6A6", width = 2 }
+
+[[shapes]]
+type = "line"
+x = "15.404cm"
+y = "7.527cm"
+w = "0.451cm"
+h = "-0.11cm"
+line = { color = "A6A6A6", width = 2 }
+
+[[shapes]]
+type = "line"
+x = "15.855cm"
+y = "7.417cm"
+w = "0.465cm"
+h = "-0.076cm"
+line = { color = "A6A6A6", width = 2 }
+
+[[shapes]]
+type = "line"
+x = "16.32cm"
+y = "7.341cm"
+w = "0.48cm"
+h = "-0.041cm"
+line = { color = "A6A6A6", width = 2 }
+
+[[shapes]]
+type = "triangle"
+x = "16.326cm"
+y = "7.094cm"
+w = "0.5cm"
+h = "0.45cm"
+fill = { color = "A6A6A6" }
+line = { type = "none" }
+rotate = 85.1
+
+[[shapes]]
+type = "text"
+x = "12.7cm"
+y = "5.7cm"
+w = "4.4cm"
+h = "0.5cm"
+font_size = 10
+color = "595959"
+align = "center"
+valign = "middle"
+margin = 0
+text = "computes the grid"
+# Arrow 3 -> 4: starts above the middle of the current top edge,
+# curves to above the next step's top-left corner; polyline + head,
+# so both endpoints are exact.
+[[shapes]]
+type = "line"
+x = "20.4cm"
+y = "7.3cm"
+w = "0.365cm"
+h = "-0.314cm"
+line = { color = "A6A6A6", width = 2 }
+
+[[shapes]]
+type = "line"
+x = "20.765cm"
+y = "6.986cm"
+w = "0.379cm"
+h = "-0.28cm"
+line = { color = "A6A6A6", width = 2 }
+
+[[shapes]]
+type = "line"
+x = "21.144cm"
+y = "6.706cm"
+w = "0.394cm"
+h = "-0.246cm"
+line = { color = "A6A6A6", width = 2 }
+
+[[shapes]]
+type = "line"
+x = "21.538cm"
+y = "6.46cm"
+w = "0.408cm"
+h = "-0.212cm"
+line = { color = "A6A6A6", width = 2 }
+
+[[shapes]]
+type = "line"
+x = "21.946cm"
+y = "6.248cm"
+w = "0.422cm"
+h = "-0.178cm"
+line = { color = "A6A6A6", width = 2 }
+
+[[shapes]]
+type = "line"
+x = "22.368cm"
+y = "6.07cm"
+w = "0.437cm"
+h = "-0.144cm"
+line = { color = "A6A6A6", width = 2 }
+
+[[shapes]]
+type = "line"
+x = "22.804cm"
+y = "5.927cm"
+w = "0.451cm"
+h = "-0.11cm"
+line = { color = "A6A6A6", width = 2 }
+
+[[shapes]]
+type = "line"
+x = "23.255cm"
+y = "5.817cm"
+w = "0.465cm"
+h = "-0.076cm"
+line = { color = "A6A6A6", width = 2 }
+
+[[shapes]]
+type = "line"
+x = "23.72cm"
+y = "5.741cm"
+w = "0.48cm"
+h = "-0.041cm"
+line = { color = "A6A6A6", width = 2 }
+
+[[shapes]]
+type = "triangle"
+x = "23.726cm"
+y = "5.494cm"
+w = "0.5cm"
+h = "0.45cm"
+fill = { color = "A6A6A6" }
+line = { type = "none" }
+rotate = 85.1
+
+[[shapes]]
+type = "text"
+x = "20.1cm"
+y = "4.1cm"
+w = "4.4cm"
+h = "0.5cm"
+font_size = 10
+color = "595959"
+align = "center"
+valign = "middle"
+margin = 0
+text = "polishes density"
+# Step 1.
+[[shapes]]
+type = "rect"
+x = "2cm"
+y = "11cm"
+w = "7.2cm"
+h = "1.3cm"
+styles = "card_header"
+align = "center"
+text = "PHASE 1 · Claim"
+
+[[shapes]]
+type = "rect"
+x = "2cm"
+y = "12.3cm"
+w = "7.2cm"
+h = "3.25cm"
+styles = "card_body"
+paragraphs = [
+  { text = "A title is a claim, not a keyword: observation + implication." },
+  { text = "**Outcome:** scan-ready title" },
+]
+
+# Step 2.
+[[shapes]]
+type = "rect"
+x = "9.4cm"
+y = "9.4cm"
+w = "7.2cm"
+h = "1.3cm"
+styles = "card_header"
+align = "center"
+text = "PHASE 2 · Structure"
+
+[[shapes]]
+type = "rect"
+x = "9.4cm"
+y = "10.7cm"
+w = "7.2cm"
+h = "4.85cm"
+styles = "card_body"
+paragraphs = [
+  { text = "One logical thread per page; the deck moves macro -> micro -> macro." },
+  { text = "- One thread, not a list of facts" },
+  { text = "- Each page holds up the title and the takeaway" },
+  { text = "**Outcome:** a deck that holds together" },
+]
+
+# Step 3.
+[[shapes]]
+type = "rect"
+x = "16.8cm"
+y = "7.8cm"
+w = "7.2cm"
+h = "1.3cm"
+styles = "card_header"
+align = "center"
+text = "PHASE 3 · Geometry"
+
+[[shapes]]
+type = "rect"
+x = "16.8cm"
+y = "9.1cm"
+w = "7.2cm"
+h = "6.45cm"
+styles = "card_body"
+paragraphs = [
+  { text = "Compute the geometry: 33.88 x 19.05cm, centre 16.94cm." },
+  { text = "- Symmetric columns: 1.5/15 + 17.4/15" },
+  { text = "- Content region 2.7-15.9cm" },
+  { text = "- Margin on every text-carrying shape" },
+  { text = "**Outcome:** balanced columns" },
+]
+
+# Step 4 - the current step, emphasized in red.
+[[shapes]]
+type = "rect"
+x = "24.2cm"
+y = "6.2cm"
+w = "7.2cm"
+h = "1.3cm"
+styles = "card_header"
+align = "center"
+fill = { color = "C7000A" }
+color = "FFFFFF"
+text = "PHASE 4 · Review"
+
+[[shapes]]
+type = "rect"
+x = "24.2cm"
+y = "7.5cm"
+w = "7.2cm"
+h = "8.05cm"
+styles = "card_body"
+paragraphs = [
+  { text = "Polish until nothing is dead space." },
+  { text = "- No obvious empty areas" },
+  { text = "- Few colors: black white grey, red/blue for emphasis" },
+  { text = "- The takeaway is a claim too" },
+  { text = "**Outcome:** a dense, finished slide" },
+]
+
+[[shapes]]
+type = "text"
+x = "1.5cm"
+y = "16.25cm"
+w = "30.9cm"
+h = "0.9cm"
+styles = "insight"
+text = "A slide is title, one logic, and takeaway - verify all three before you stop."
