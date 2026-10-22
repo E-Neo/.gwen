@@ -16,17 +16,17 @@ slides = ["end.toml"]
 title = "End"
 
 [styles.shape]
-margin = 0
 align = "left"
 valign = "top"
+margin = ["0.13cm", "0.25cm", "0.13cm", "0.25cm"]
 line = { width = 1, color = "D3D3D3" }
 font_face = "Microsoft YaHei"
 
 [styles.text]
+margin = 0
 line = { type = "none" }
 
 [styles.named.insight]
-font_face = "Microsoft YaHei"
 font_size = 16
 color = "0000FF"
 bold = true
@@ -35,23 +35,21 @@ valign = "middle"
 margin = 0
 
 [styles.named.source]
-font_face = "Microsoft YaHei"
 font_size = 10.5
 color = "A3A3A3"
 italic = true
 
-[styles.named.card_header]
-font_face = "Microsoft YaHei"
+[styles.named.card_title]
 font_size = 15
 bold = true
 color = "000000"
 fill = { color = "CCECFF" }
 line = { type = "none" }
+align = "center"
 valign = "middle"
 margin = ["0.1cm", "0.45cm", "0.1cm", "0.45cm"]
 
-[styles.named.card_body]
-font_face = "Microsoft YaHei"
+[styles.named.card]
 font_size = 11.5
 color = "1D1D1B"
 fill = { color = "F2F2F2" }
@@ -61,7 +59,6 @@ margin = [10, 14, 6, 14]
 para_space_before = 3
 
 [styles.named.frame]
-font_face = "Microsoft YaHei"
 font_size = 11.5
 color = "1D1D1B"
 fill = { color = "FFFFFF" }
@@ -70,8 +67,7 @@ valign = "top"
 margin = [31, 20, 11, 20]
 para_space_before = 6
 
-[styles.named.frame_label]
-font_face = "Microsoft YaHei"
+[styles.named.frame_title]
 font_size = 15.5
 bold = true
 color = "0000FF"

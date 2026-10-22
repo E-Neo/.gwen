@@ -20,11 +20,10 @@
   </defs>
 
   <g filter="url(#pf-soft)" pointer-events="none">
-    <!-- 外层：顶部中心与底部中心均对齐 x=129 -->
+    <!-- Three nested trapezoids sharing the centre line x=129; the blur filter
+         fades their ends so they read as a receding floor. Outer, middle, inner. -->
     <path d="M102.5 1H155.5L256.3 28H1.7Z" fill="url(#pf-fill)"/>
-    <!-- 中层 -->
     <path d="M100.8 6H157.2L211.1 28H46.9Z" fill="url(#pf-fill)"/>
-    <!-- 内层 -->
     <path d="M116.1 5.5H141.9L170.5 28H87.5Z" fill="url(#pf-fill)"/>
   </g>
 </svg>

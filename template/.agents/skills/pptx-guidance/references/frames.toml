@@ -44,7 +44,7 @@ x = "3.8cm"
 y = "3.35cm"
 w = "5.4cm"
 h = "0.9cm"
-styles = "frame_label"
+styles = "frame_title"
 text = "**Geometry**"
 
 # Frame 2: titles.
@@ -78,7 +78,7 @@ x = "14.05cm"
 y = "3.35cm"
 w = "5.9cm"
 h = "0.9cm"
-styles = "frame_label"
+styles = "frame_title"
 text = "**Title**"
 
 # Frame 3: a small comparison table instead of long text.
@@ -97,7 +97,7 @@ x = "23.1cm"
 y = "3.35cm"
 w = "8.8cm"
 h = "0.9cm"
-styles = "frame_label"
+styles = "frame_title"
 text = "**Two kinds of title**"
 
 # Rows: dimension | keyword title | claim title. One highlighted row.

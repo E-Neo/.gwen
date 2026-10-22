@@ -1,5 +1,5 @@
 # Cards + staircase as a worked methodology example: the equal-width card
-# pattern (card_header + card_body) arranged as a staircase of writing
+# pattern (card_title + card) arranged as a staircase of writing
 # principles (Claim -> Structure -> Geometry -> Review). A framing band on
 # top, four step-cards rising left to right on the y=15.55 baseline, each
 # with a centered header subtitle. The top-left annotation fills the diagonal
@@ -362,7 +362,7 @@ x = "2cm"
 y = "11cm"
 w = "7.2cm"
 h = "1.3cm"
-styles = "card_header"
+styles = "card_title"
 align = "center"
 text = "PHASE 1 · Claim"
 
@@ -372,7 +372,7 @@ x = "2cm"
 y = "12.3cm"
 w = "7.2cm"
 h = "3.25cm"
-styles = "card_body"
+styles = "card"
 paragraphs = [
   { text = "A title is a claim, not a keyword: observation + implication." },
   { text = "**Outcome:** scan-ready title" },
@@ -385,7 +385,7 @@ x = "9.4cm"
 y = "9.4cm"
 w = "7.2cm"
 h = "1.3cm"
-styles = "card_header"
+styles = "card_title"
 align = "center"
 text = "PHASE 2 · Structure"
 
@@ -395,7 +395,7 @@ x = "9.4cm"
 y = "10.7cm"
 w = "7.2cm"
 h = "4.85cm"
-styles = "card_body"
+styles = "card"
 paragraphs = [
   { text = "One logical thread per page; the deck moves macro -> micro -> macro." },
   { text = "- One thread, not a list of facts" },
@@ -410,7 +410,7 @@ x = "16.8cm"
 y = "7.8cm"
 w = "7.2cm"
 h = "1.3cm"
-styles = "card_header"
+styles = "card_title"
 align = "center"
 text = "PHASE 3 · Geometry"
 
@@ -420,7 +420,7 @@ x = "16.8cm"
 y = "9.1cm"
 w = "7.2cm"
 h = "6.45cm"
-styles = "card_body"
+styles = "card"
 paragraphs = [
   { text = "Compute the geometry: 33.88 x 19.05cm, centre 16.94cm." },
   { text = "- Symmetric columns: 1.5/15 + 17.4/15" },
@@ -436,7 +436,7 @@ x = "24.2cm"
 y = "6.2cm"
 w = "7.2cm"
 h = "1.3cm"
-styles = "card_header"
+styles = "card_title"
 align = "center"
 fill = { color = "C7000A" }
 color = "FFFFFF"
@@ -448,7 +448,7 @@ x = "24.2cm"
 y = "7.5cm"
 w = "7.2cm"
 h = "8.05cm"
-styles = "card_body"
+styles = "card"
 paragraphs = [
   { text = "Polish until nothing is dead space." },
   { text = "- No obvious empty areas" },

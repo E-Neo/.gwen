@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="256" viewBox="0 0 64 256">
+  <defs>
+    <!-- Internal fill gradient (light grey) -->
+    <linearGradient id="fillGradient" x1="0" y1="0" x2="64" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F5F5F5"/>
+      <stop offset="100%" stop-color="#D0D0D0"/>
+    </linearGradient>
+
+    <!-- Left triangle's leg gradient: pure white at base x=4 to dark grey at tip x=42 -->
+    <linearGradient id="waistGradientLeft" x1="4" y1="0" x2="42" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#555555"/>
+    </linearGradient>
+
+    <!-- Right triangle's leg gradient: pure white at base x=22 to dark grey at tip x=60 -->
+    <linearGradient id="waistGradientRight" x1="22" y1="0" x2="60" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#555555"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 1. Right triangle (bottom layer) -->
+  <polygon
+    points="22,4 22,252 60,128"
+    fill="url(#fillGradient)"
+  />
+  <!-- Stroke only the two legs using the right gradient -->
+  <polyline
+    points="22,4 60,128 22,252"
+    fill="none"
+    stroke="url(#waistGradientRight)"
+    stroke-width="1.5"
+    stroke-linejoin="round"
+  />
+
+  <!-- 2. Left triangle (top layer) -->
+  <polygon
+    points="4,10 4,246 42,128"
+    fill="url(#fillGradient)"
+  />
+  <!-- Stroke only the two legs using the left gradient -->
+  <polyline
+    points="4,10 42,128 4,246"
+    fill="none"
+    stroke="url(#waistGradientLeft)"
+    stroke-width="1.5"
+    stroke-linejoin="round"
+  />
+</svg>

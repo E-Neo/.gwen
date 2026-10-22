@@ -1,4 +1,5 @@
-# The cover slide is for title and author only
+# The cover slide is for title and author only.
+# Just edit the text of the following placeholders, don't add new shapes.
 
 master = "cover"
 

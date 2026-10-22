@@ -3,246 +3,127 @@ name: pptx-guidance
 description: Use when an Agent needs to generate or improve a PowerPoint presentation (.pptx). Complements the gwen skill, which covers tool usage.
 ---
 
-# Slide writing guidance
+# 幻灯片编写指南
 
-We are the technology insights team of an infrastructure-software company.
-A deck must have "logic" - logic here usually means a *story* that reads
-smoothly and holds together. A deck is not a flat list of facts: it should
-combine objective facts with a point of view on trends.
+我们是一家基础软件公司的技术洞察组。
+胶片一定要有“逻辑”——这里的逻辑通常是一个 *故事*，看上去讲得通、讲得顺。胶片不是信息的简单罗列：既要有客观事实，也要给出趋势观点。
 
-## Research
+## 调研
 
-Keep the research, not just the deck. Every fact that reaches a slide should be
-traceable back to something you wrote down.
+留住调研过程，而不只是最后的胶片。每个上到胶片上的事实，都应该能追溯到你写下来的东西。
+比如洞察一个软件，你需要了解它背后的作者、推手是谁。对于开源软件你需要通过 star-history 看社区热度怎么样，必要的时候把代码仓拉下来分析分析。
 
-- **`references/` is the source of truth.** When you search the web, write what
-  you found into Markdown files under the project's `references/` - links,
-  quotes, dates, and the numbers you extracted, with the question you were
-  answering at the top of each file. Write slides from those files, not from
-  memory: a later reader must be able to re-check a claim without repeating the
-  search.
-- **`references/media/` holds the raw material.** Screenshots, diagrams and
-  charts collected while researching go there, each with its origin recorded in
-  the Markdown file that cites it.
-- **`media/` holds only what ships.** Copy an asset into `media/` when a slide
-  actually uses it, so the build depends on nothing outside the project.
+- **`references/` 是事实来源。** 上网检索时，把查到的东西写进项目 `references/` 下的 Markdown 文件：链接、原文摘录、日期、你提取的数字，并在每个文件开头写清楚当时要回答的问题。写胶片时依据这些文件，而不是凭记忆——后来的人必须能重新核对某个说法，而不必重做一遍检索。调研的代码仓也可以拉到这个目录下，总之这是个原始信息的存放目录。
+- **`references/media/` 存放原始素材。** 调研中收集的截图、示意图、图表放在这里，并在引用它的 Markdown 文件里记录出处。
+- **`media/` 只放最终要用的东西。** 只有当某页胶片真正用到某个素材时，才把它复制进 `media/`，这样构建就不依赖项目之外的任何文件。
 
-These are the project's paths, not this skill's: `references/` next to this file
-holds layout examples, not research.
+注意：这些是项目的路径，不是本 skill 的路径——本文件旁边的 `references/` 放的是排版示例，不是调研资料。
 
-## Overall structure
+## 整体结构
 
-A complete deck usually contains a cover, chapter pages, and an end page.
-Larger decks (dozens of pages) add a contents page before each chapter.
+一个完整胶片通常包含封面页、章节页和结束页。
 
-The structure follows "macro -> micro -> macro". Chapter pages fall into
-three roles:
+结构遵循“总-分-总”。章节页按作用分为三类：
 
-- **Hat pages** - the overview that leads into the next run of pages;
-  typically one before each chapter.
-- **Content pages** - the body of the argument.
-- **Insight pages** - the takeaway of the preceding content; usually one
-  final insight page right before the end page.
+- **帽子页**——接下来几页的总起页，一般每个章节前有一个。
+- **内容页**——论证的主体。
+- **启示页**——对前面内容的总结启示，通常在结束页之前有一个总启示页。
 
-## Anatomy of a single slide
+## 单页胶片的写法
 
-A slide is made of three parts: a **title**, **body**, and a **takeaway**
-(the insight).
+单页胶片由三部分组成：**标题**、**正文**和**启示**。
 
-Typography defaults: font `Microsoft YaHei`. Do not put a space between
-digits/Latin letters and Chinese characters. Avoid obviously
-AI-generated-looking punctuation such as `·`, `「」`, `『』`.
+排版默认：字体 `Microsoft YaHei`。数字/英文和汉字之间不要加空格。避免 `·`、`「」`、`『』` 这类明显像 AI 生成的标点。
 
-### The title is a claim
+### 标题即观点
 
-The title must state a point directly - typically "an observation + what the
-observation implies". A topic keyword is not a title.
+标题必须直接给出观点，通常是“一个现象 + 这个现象意味着什么”。主题词不是标题。
 
-- Bad: "NV G3.5 Technical Introduction"
-  - Why: this is only a keyword. A reader scanning titles gets no
-    information, and many readers only ever read the title - if the title is
-    weak, the slide is lost.
-- Good: "NV adds a G3.5 layer - GPU connects to remote storage directly to
-  accelerate inference, long-context Agent workloads see TPS 5×↑"
-  - Why: it names the observation ("NV adds a G3.5 layer"), briefly explains
-    the new term (GPU connecting to remote storage to accelerate inference),
-    then says what it means and what it's worth. Quantify whenever possible
-    ("TPS 5×↑", "cost 50%↓").
+- 反例：《NV G3.5技术介绍》
+  - 点评：这只是一个主题词。读者扫一眼标题得不到任何信息，而很多人只看标题——标题不行，这页上来就废了。
+- 正例：《NV新增G3.5层，GPU直连远端存储加速推理，长上下文Agent负载TPS 5×↑》
+  - 点评：它点出现象（“NV 新增 G3.5 层”），用一句话解释新名词（GPU 直连远端存储、加速推理），再说清它意味着什么、价值多大。能量化就量化（“TPS 5×↑”“成本 50%↓”）。
 
-Default title style: 24pt bold red (`C7000A`), left-aligned, at the top of
-the slide, ideally a single line.
+标题默认样式：24pt 红色（`C7000A`）加粗、左对齐，位于胶片顶部，尽量控制在一行。
 
-### Body
+### 正文
 
-The body is flexible and information-dense, but it must have logic, and each
-page carries exactly one logical thread. Common patterns:
+正文灵活且信息量大，但一定要有逻辑，且每页只能有一个逻辑。常见逻辑有：
 
-- **Bad -> Good**: the left side explains what is wrong with the current
-  state (AS-IS / others / ...), the right side explains the better state
-  (TO-BE / ours / ...) and its value, joined by a small grey arrow (about
-  2 x 2cm); keep the arrow small and the two panels full-height.
-- **Phased evolution**: give the characteristics and representative of each
-  phase, then derive the needs of each phase below, and finally the future
-  trend. See [`references/phase-evolution.toml`](references/phase-evolution.toml)
-  and [`references/cards.toml`](references/cards.toml).
-- **Macro -> micro**: a big logic on the left, expanded into several small
-  logics on the right. For example: an AS-IS -> TO-BE on the left with two or
-  three resulting technology trends on the right; or a software stack with a
-  few key points marked in red (`➊➋➌...`) and the points expanded on the
-  right. A common asset for macro -> micro layouts is the perspective floor
-  (in `media/`): it "opens" toward the detail, so rotate it so the
-  trapezoids' **long side points at the details** and the **short side
-  points at the macro side**; it works well as a visual separator between a
-  stack and its annotation column.
-- **Classification**: split the topic into several relatively independent
-  small logics along some dimension; each block tells its own story.
+- **Bad → Good**：左边讲现状（AS-IS / 别人 / ……）是什么、有什么问题，右边讲更好的状态（TO-BE / 我们 / ……）是什么、价值在哪；中间用模板的双三角箭头 `media/two-triangles-right-arrow.svg` 连接，或者自己画一个灰色箭头，大小自定。
+- **分阶段演进**：给出各阶段的特点和典型代表，下面再导出各阶段的诉求，最后是未来趋势。见 [`references/phase-evolution.toml`](references/phase-evolution.toml) 和 [`references/cards.toml`](references/cards.toml)。
+- **总-分**：左边讲一个大逻辑，右边展开成几个小逻辑。例如左边是一个 AS-IS → TO-BE，右边讲它带来的两三个技术趋势；或者左边画一个软件栈，在上面用红色标几个关键点（`➊➋➌...`），右边展开讲这几个点。总-分常用的素材是 `media/perspective-floor.svg`，它朝细节方向“打开”，梯形**长边朝向细节**、**短边朝向总述一侧**；它很适合用作栈图和右侧注释列之间的视觉分隔。
+- **分类**：按某种维度拆成不超过三个相对独立的小逻辑，每个逻辑块讲自己的故事。
 
-The body is case-by-case, but these reusable building blocks cover most
-patterns:
+正文具体怎么写要具体分析，下面是一些常用的组件：
 
-- **Pentagon + chevron combo** for phased evolution as the upper half of the
-  page; list each phase's characteristics and needs below.
-- **Staircase** for phased evolution.
-- **Block diagrams** - this is the style most readers respond to. Any logic
-  expressible as boxes (software stacks, architecture) should be drawn as
-  boxes. See [`references/stack.toml`](references/stack.toml).
-- **Label + content boxes**, two variants:
-  - Equal-width cards: the label is black bold, centered, in a borderless
-    `#ccecff` box; the content box is `#f2f2f2`-filled with a `#d3d3d3`
-    border. Use the `card_header` / `card_body` named styles (defined in the
-    template's `main.toml`). See [`references/cards.toml`](references/cards.toml).
-  - Label riding the top edge: the label is `#0000ff` bold, white fill, no
-    border, centered, straddling the top edge of a round rectangle
-    (`rect_radius` 0.1) with a `#d3d3d3` border and white fill. Use the
-    `frame` / `frame_label` named styles. See
-    [`references/frames.toml`](references/frames.toml).
-  - Use one variant consistently within a page; different pages may use
-    different variants for variety. A label must still be a claim, not a bare
-    keyword.
-- **Tables**: a table is for contrast - one simple logic, usually two options
-  compared across a few shared dimensions. Draw the grid with `line` shapes
-  and the cells with `text` shapes (no header fill, no vertical bars, small
-  cell margins), keep it to about a quarter of the slide, and put it inside a
-  frame card. A table rarely owns a slide - the rest of the slide should read
-  the table. See the third frame of
-  [`references/frames.toml`](references/frames.toml).
+- **五边形 + V 形箭头组合**：用于分阶段演进，放在页面上半部分；下方按阶段列出各自的特点和诉求。
+- **阶梯**：用于分阶段演进。
+- **小标题 + 内容框**，两种变体：
+  - 等宽卡片（card）：小标题黑色加粗、居中，放在无边框的 `#ccecff` 框里；内容框 `#f2f2f2` 填充、`#d3d3d3` 边框。使用命名样式 `card_title` / `card`（定义在模板的 `main.toml` 里）。见 [`references/cards.toml`](references/cards.toml)。
+  - 小标题骑在内容顶边（frame）：标题 `#0000ff` 加粗、白色填充、无边框、居中，骑在圆角矩形（`rect_radius` 0.1）的顶边上，矩形 `#d3d3d3` 边框、白色填充。使用命名样式 `frame` / `frame_title`。见 [`references/frames.toml`](references/frames.toml)。
+  注意：
+  - 同一页固定用同一种变体，不同页可以换着用来增加灵活性。
+  - **小标题地位仅次于标题和启示，同样必须是观点，不能只是关键词**。
+- **表格**：表格呈现的逻辑要简单，一般在一个维度上比较两三个类别。用 `line` 形状画线、用 `text` 形状填格子（不加表头底色、不加竖线、格内边距要小），大小控制在约四分之一页，通常放在内容框做直观对比或证据支撑。不要一张表独占一页。见 [`references/frames.toml`](references/frames.toml) 的第三个框。
+- **矩形框图**：这是读者最喜欢的展现形式，几乎每个软件项目的介绍都要画软件栈或架构图，按照前面“总-分”逻辑标注关键点，展开技术细节。见 [`references/stack.toml`](references/stack.toml)。
 
-### Numbers
+### 启示即观点
 
-A number is the strongest thing on a slide, so it has to be earned twice.
+启示在胶片底部，是整页的落点。很多读者只看标题和启示，所以它值得和标题一样仔细斟酌。
 
-- **Every quantified number carries a source.** A figure with no source is a
-  guess the reader cannot check. Name the source in the `source` style
-  (10.5pt grey italic) on the slide, and keep the supporting detail in
-  `references/`.
-- **Never let a number stand alone.** A big bold figure floating in the middle
-  of a card or frame says nothing: no unit, no comparison, no consequence. Put
-  it in a sentence that gives what it measures, what it is compared with, and
-  what follows from it.
-- **Write change as value + arrow + dimension.** The arrow always sits
-  immediately after the value; the word after it names the dimension that
-  moved. Drop "up" and "down" - the arrow already says the direction.
-  - `TPS 5×↑`, `5×↑ faster`, `50%↓ cheaper`, `latency 40%↓`,
-    `tokens 3×↑ per request`.
-  - Multiples take `×`, shares take `%`; keep the unit attached. Dimensions
-    such as `33.88 x 19.05cm` are not changes and keep their plain `x`.
-  - An arrow states direction, not good news: `error rate 5%↑` is bad,
-    `cost 50%↓` is good. The dimension word has to make clear which one you
-    mean.
-- **Emphasize inside the sentence.** Bold red or blue on the value and arrow is
-  fine - **5×↑** - but the sentence does the work, not the type size.
-- **Bad:** a card containing `5×↑` and the label "faster".
-- **Good:** "Long-context Agent inference runs **5×↑** faster once the GPU
-  reads remote storage directly." (source: ...)
+启示通常包含两部分：**so what** 和 **now what**——前半句总结趋势，后半句给出方向建议。
 
-Numbers must agree wherever they appear - title, body, takeaway, `references/`.
-Round the same way each time, and do not silently swap one metric for another.
+启示默认样式：16pt 蓝色（`#0000ff`）加粗、水平居中，最好只有一行、50 字以内。
 
-### Layout principles
+### 布局原则
 
-- **Balance and symmetry.** Work out the geometry against the slide size: a
-  13.34 x 7.5in deck is 33.88 x 19.05cm, the horizontal centre is 16.94cm,
-  and the content region is roughly 2.7-15.9cm (takeaway at ~16.25cm).
-  Prefer symmetric columns, e.g. left `x = 1.5cm, w = 15cm` and right
-  `x = 17.4cm, w = 15cm`, so the margins mirror each other. A lopsided
-  layout reads as unfinished.
-- **Margins on text.** Any shape carrying text needs an inner margin so the
-  text does not touch the edges; the default is
-  `margin = ["0.13cm", "0.25cm", "0.13cm", "0.25cm"]`
-  (top/right/bottom/left). To position text precisely instead, split the
-  shape: one `rect` for the border (no text) plus a separate `text` shape
-  you place yourself (then `margin = 0`).
-- **Stack diagrams.** Keep the stack to about half the slide and explain it
-  on the other half. Annotate **components**, not just layers: put a circled
-  number on the specific box (e.g. above a particular product) and explain
-  that component next to the stack. See
-  [`references/stack.toml`](references/stack.toml).
+- **平衡与对称。** 拿胶片尺寸把几何算清楚：13.34 x 7.5in 的胶片是 33.88 x 19.05cm，水平中线在 16.94cm，内容区大约 2.7–15.9cm（启示在 ~16.25cm）。优先用对称的两栏，例如左栏 `x = 1.5cm, w = 15cm`、右栏 `x = 17.4cm, w = 15cm`，两边留白互为镜像。歪掉的布局看起来就像没做完。
+- **文字留内边距。** 任何带文字的图形都需要内边距，别让文字贴边；默认是 `margin = ["0.13cm", "0.25cm", "0.13cm", "0.25cm"]`（上/右/下/左）。如果要把文字精确放到某个位置，就拆开：一个 `rect` 只画边框（不放文字），再单独放一个 `text` 形状自己定位。
+- **数字不要充门面。** 不要用超大字号把单个数字做成视觉冲击；我们做的是洞察，不是宣传。数字是证据，放进比较或因果句里，字号与正文同级，需要强调时靠加粗红/蓝。
 
-Body font is generally 12pt; important parts are bold red or blue. Sources
-are 10.5pt grey italic (`#a3a3a3`). Keep the palette small - black, white,
-red, blue, grey - and use red/blue for emphasis only, sparingly.
+正文一般 12pt；重要部分加粗红/蓝。来源是 10.5pt 灰色斜体（`#a3a3a3`，`source` 样式）。颜色要少——黑、白、红、蓝、灰，其中红蓝只用于标题、启示和强调，慎用。
 
-Our slides are information-dense; avoid obvious empty areas. Write body text
-to support the title and takeaway, not for its own sake: every item should
-relate logically to the rest of the page.
-
-### The takeaway is a claim
-
-The takeaway sits at the bottom of the slide and is the landing point of the
-whole page. Some readers look at only the title and the takeaway, so it
-deserves the same care as the title.
-
-A takeaway usually has two parts: **so-what** and **now-what** - the first
-half summarizes the trend, the second half suggests a direction.
-
-Default takeaway style: 16pt bold blue (`#0000ff`), horizontally centered,
-ideally a single line of at most 50 characters.
-
-## Review
-
-A page is finished when the measure says it is dense, the logic says it holds,
-and your eyes say it draws cleanly - in that order.
-
-### Density first
-
-Run `gwen measure` before you open the rendered deck. It reports composition and
-content facts per slide, so a half-empty region shows up as a number instead of
-something you miss while skimming.
+我们的胶片信息密度很高，不要留明显的空白。`gwen measure` 会度量页面版面和内容信息。
 
 ```sh
-gwen measure            # every slide
-gwen measure --page 4   # one slide while iterating
+gwen measure            # 每页
+gwen measure --page 4   # 只看一页
 ```
 
-Empty space is not "clean" or "breathing room": read `whitespace`, `largest_void`
-and `density` - a large void away from the edges, or a page much less dense than
-the rest of the deck, is the empty space you would have missed by eye. Fill it
-with evidence, a second column, an annotation or a wider panel - then measure
-again. Open the `.pptx` only once the numbers look right; measure finds
-emptiness, your eyes find collisions, overflow and bad line breaks.
+但也不要为了写而写，正文是为了支撑标题和启示里的观点：每一项都要和页面其他内容形成逻辑，没有关联的无效信息很容易被围攻。
 
-### The logic pass
+## 检查
 
-Reading order is the reader's only path through the page. After every edit, read
-the deck top to bottom and test three levels:
+一页什么时候算写完：逻辑严密（内容）、布局美观（形式）。
 
-- **Sentence.** Does each sentence follow from the one before it? A claim needs
-  its evidence within reach.
-- **Page.** Does every element serve the title, and does the body land on the
-  takeaway? Anything that does not carry the thread is cut or moved, not
-  decorated.
-- **Deck.** Do the pages build macro -> micro -> macro, without repeating or
-  contradicting each other?
+### 内容逻辑严密
 
-Two failures to hunt for:
+阅读顺序是读者走完这页的唯一路径。每次修改后，从上到下通读整套胶片，检查三层：
 
-- **Internal inconsistency.** A figure, name or claim means the same thing
-  everywhere, in every slide and in the sources. If two pages disagree, one of
-  them is wrong.
-- **Unpaid setups.** Raise it or drop it. A term, example or question you
-  mention and never develop leaves the reader waiting; a mention you do not pay
-  off is worse than no mention. Define an obscure term in a few words the first
-  time it appears, before you argue with it.
+- **句子。** 每句话是否由上一句自然推出？一个观点需要它的证据就在手边。
+- **页面。** 每个元素是否都在服务标题？正文是否落到启示上？不承载这条线的东西，要么删掉要么挪走，不要靠装饰救。
+- **整套。** 各页是否按总-分-总层层推进，没有重复、没有互相矛盾？
 
-Then read it again. The logic of each sentence, each page and the whole deck is
-polished, not written.
+逻辑上重点抓这些毛病：
+
+- **前后矛盾。** 同一个数字、名字或观点，在每一页、每一份资料里都必须是同一个意思。如果两页打架，必有一页是错的。
+- **埋了不兑现的伏笔。** 要么展开，要么删掉。你提到却从不展开的术语、例子或问题，会让读者一直等着；提了不兑现，比不提更糟。生僻术语第一次出现时，先用几个字定义清楚，再拿它论证。
+- **过分夸大。** 收集到的信息普遍都会“王婆卖瓜”，但你要站在一个客观中立的立场上，严肃地做逻辑推导。
+
+另外要杜绝 AI 味，讲人话，禁止使用“不是……而是……”。
+
+反复检查修改直到自己认为达到满分为止，每一句、每一页和整套胶片的逻辑都是打磨出来的，不是写出来的。
+
+### 形式布局美观
+
+`gwen measure` 找空，眼睛找碰撞、溢出和断行；两项都过了才算排版完成。
+
+- **对称与边距。** 两栏的宽度、间距、上下留白互为镜像；内容落在 2.7–15.9cm 内，启示带不挤到页脚。
+- **对齐。** 同类元素共用基准线：卡片顶端、卡片宽度、文字左边界、标题与框的中心线。不要出现差 0.1cm 的“差不多”。
+- **重叠。** 检查文字是否压住边框、箭头是否穿进卡片、注释是否盖住图形；图层顺序是否正确。
+- **溢出。** 文字是否超出框、被裁切或自动缩小；表格和栈图是否顶到安全边距。
+- **断行。** 标题是否被迫折行、卡片里是否出现孤字或单词被拆开；改字号或改文案，不要硬塞。
+- **颜色。** 全页是否只有黑、白、灰，红蓝只落在标题、启示和关键数字上；没有装饰性色块或渐变。
+- **密度。** `whitespace`、`largest_void`、`density` 无异常：远离边缘的大空洞要填，明显比同套稀疏的页要补。
+- **一致性。** 卡片样式、圆角、线宽、字号层级、箭头形态保持一套；不同页可变体，同一页只用一种。
