@@ -1,5 +1,5 @@
 # Bad -> Good 的完整示例：左边框放关键词标题，中间用双三角箭头连接，
-# 右边框把同一批主题改写成主张；下方第三个框放一张紧凑的对照表。
+# 右边框把同一批主题改写成观点；下方第三个框放一张紧凑的对照表。
 # 三个框都是 frame 变体：圆角边框 + 骑在顶边上的 frame_title。
 # 几何：上排 1.5–13.5 / 16.1–32.4，下排 1.5–32.4；箭头宽 1.55cm。
 # master："content"。复制到 slides/ 并在 [[sections]] 里登记。
@@ -9,9 +9,9 @@ master = "content"
 [[shapes]]
 type = "text"
 placeholder = "title"
-text = "TODO: 标题——一个观察，以及它意味着什么"
+text = "TODO: 标题：一个观察，以及它意味着什么"
 
-# 左框：关键词标题——读完不知道结论。
+# 左框：关键词标题，读完不知道结论。
 [[shapes]]
 type = "round_rect"
 x = "1.5cm"
@@ -21,18 +21,15 @@ h = "7.4cm"
 rect_radius = 0.1
 styles = "frame"
 text = """**“某某入门”**
-读者不知道你要说什么。
+读者不知道你要说什么
 
 **“技术介绍”**
-读完还是不知道结论。
+读完还是不知道结论
 
 **“趋势展望”**
-没有观点，也没有证据。
+没有观点，也没有证据
 
-**“方法分享”**
-听完不知道怎么做。
-
-关键词标题只是目录；目录不是观点。"""
+关键词标题只是目录；目录不是观点"""
 
 [[shapes]]
 type = "text"
@@ -43,7 +40,7 @@ h = "0.9cm"
 styles = "frame_title"
 text = "关键词标题"
 
-# 中间：双三角箭头，从坏例子指向改写后的主张。
+# 中间：双三角箭头，从坏例子指向改写后的观点。
 [[shapes]]
 type = "image"
 src = "media/two-triangles-right-arrow.svg"
@@ -52,20 +49,7 @@ y = "4.4cm"
 w = "1.55cm"
 h = "6.2cm"
 
-[[shapes]]
-type = "text"
-x = "13.6cm"
-y = "10.55cm"
-w = "2.4cm"
-h = "0.4cm"
-text = "改写"
-font_size = 9
-color = "808080"
-align = "center"
-valign = "middle"
-margin = 0
-
-# 右框：同一批主题，改写成主张。
+# 右框：同一批主题，改写成观点。
 [[shapes]]
 type = "round_rect"
 x = "16.1cm"
@@ -75,18 +59,18 @@ h = "7.4cm"
 rect_radius = 0.1
 styles = "frame"
 text = """**反例**：“某某入门”
-**改写**：“3 天独立出片：模板 + 检查清单把返工降到 1 次。”
+**改写**：“3 天独立出片：模板 + 检查清单把返工降到 1 次”
 
 **反例**：“技术介绍”
-**改写**：“一页一条逻辑：读者 10 秒能复述结论。”
+**改写**：“一页一条逻辑：读者 10 秒能复述结论”
 
 **反例**：“趋势展望”
-**改写**：“标题先立主张：扫一眼就知道价值在哪。”
+**改写**：“标题先立观点：扫一眼就知道价值在哪”
 
 **反例**：“方法分享”
-**改写**：“六页版式一次配齐，出片快<span class="accent">5×↑</span>、成本<span class="accent">50%↓</span>。”
+**改写**：“六页版式一次配齐，出片快<span class="accent">5×↑</span>、成本<span class="accent">50%↓</span>”
 
-同一批主题，多给一句“意味着什么”，目录就变成了观点。"""
+同一批主题，多给一句“意味着什么”，目录就变成了观点"""
 
 [[shapes]]
 type = "text"
@@ -95,9 +79,9 @@ y = "3.05cm"
 w = "4.8cm"
 h = "0.9cm"
 styles = "frame_title"
-text = "主张标题"
+text = "观点标题"
 
-# 下框：一张对照表——只留横线，不加强底色和竖线。
+# 下框：一张对照表，只留横线，不加强底色和竖线。
 [[shapes]]
 type = "round_rect"
 x = "1.5cm"
@@ -114,16 +98,15 @@ y = "10.95cm"
 w = "6.4cm"
 h = "0.9cm"
 styles = "frame_title"
-text = "关键词 vs 主张"
+text = "关键词 vs 观点"
 
 [[shapes]]
 type = "text"
 x = "3.55cm"
-y = "12cm"
+y = "11.9cm"
 w = "3.2cm"
-h = "0.55cm"
+h = "0.62cm"
 bold = true
-font_size = 9.5
 color = "1D1D1B"
 valign = "middle"
 margin = ["0.03cm", "0.1cm", "0.03cm", "0.1cm"]
@@ -132,11 +115,10 @@ text = "维度"
 [[shapes]]
 type = "text"
 x = "6.95cm"
-y = "12cm"
+y = "11.9cm"
 w = "9.2cm"
-h = "0.55cm"
+h = "0.62cm"
 bold = true
-font_size = 9.5
 color = "1D1D1B"
 align = "center"
 valign = "middle"
@@ -146,25 +128,23 @@ text = "关键词标题"
 [[shapes]]
 type = "text"
 x = "16.35cm"
-y = "12cm"
+y = "11.9cm"
 w = "13.5cm"
-h = "0.55cm"
+h = "0.62cm"
 bold = true
-font_size = 9.5
 color = "1D1D1B"
 align = "center"
 valign = "middle"
 margin = ["0.03cm", "0.1cm", "0.03cm", "0.1cm"]
-text = "主张标题"
+text = "观点标题"
 
 [[shapes]]
 type = "text"
 x = "3.55cm"
-y = "12.55cm"
+y = "12.52cm"
 w = "3.2cm"
-h = "0.55cm"
+h = "0.62cm"
 bold = true
-font_size = 9.5
 color = "1D1D1B"
 valign = "middle"
 margin = ["0.03cm", "0.1cm", "0.03cm", "0.1cm"]
@@ -173,10 +153,9 @@ text = "读者得到"
 [[shapes]]
 type = "text"
 x = "6.95cm"
-y = "12.55cm"
+y = "12.52cm"
 w = "9.2cm"
-h = "0.55cm"
-font_size = 9.5
+h = "0.62cm"
 color = "1D1D1B"
 align = "center"
 valign = "middle"
@@ -186,10 +165,9 @@ text = "什么也没有"
 [[shapes]]
 type = "text"
 x = "16.35cm"
-y = "12.55cm"
+y = "12.52cm"
 w = "13.5cm"
-h = "0.55cm"
-font_size = 9.5
+h = "0.62cm"
 color = "1D1D1B"
 align = "center"
 valign = "middle"
@@ -199,11 +177,10 @@ text = "一个结论"
 [[shapes]]
 type = "text"
 x = "3.55cm"
-y = "13.1cm"
+y = "13.14cm"
 w = "3.2cm"
-h = "0.55cm"
+h = "0.62cm"
 bold = true
-font_size = 9.5
 color = "1D1D1B"
 valign = "middle"
 margin = ["0.03cm", "0.1cm", "0.03cm", "0.1cm"]
@@ -212,10 +189,9 @@ text = "能复述吗"
 [[shapes]]
 type = "text"
 x = "6.95cm"
-y = "13.1cm"
+y = "13.14cm"
 w = "9.2cm"
-h = "0.55cm"
-font_size = 9.5
+h = "0.62cm"
 color = "1D1D1B"
 align = "center"
 valign = "middle"
@@ -225,10 +201,9 @@ text = "不能"
 [[shapes]]
 type = "text"
 x = "16.35cm"
-y = "13.1cm"
+y = "13.14cm"
 w = "13.5cm"
-h = "0.55cm"
-font_size = 9.5
+h = "0.62cm"
 color = "1D1D1B"
 align = "center"
 valign = "middle"
@@ -238,11 +213,10 @@ text = "能"
 [[shapes]]
 type = "text"
 x = "3.55cm"
-y = "13.65cm"
+y = "13.76cm"
 w = "3.2cm"
-h = "0.55cm"
+h = "0.62cm"
 bold = true
-font_size = 9.5
 color = "1D1D1B"
 valign = "middle"
 margin = ["0.03cm", "0.1cm", "0.03cm", "0.1cm"]
@@ -251,10 +225,9 @@ text = "可量化"
 [[shapes]]
 type = "text"
 x = "6.95cm"
-y = "13.65cm"
+y = "13.76cm"
 w = "9.2cm"
-h = "0.55cm"
-font_size = 9.5
+h = "0.62cm"
 color = "1D1D1B"
 align = "center"
 valign = "middle"
@@ -264,10 +237,9 @@ text = "罕有"
 [[shapes]]
 type = "text"
 x = "16.35cm"
-y = "13.65cm"
+y = "13.76cm"
 w = "13.5cm"
-h = "0.55cm"
-font_size = 9.5
+h = "0.62cm"
 color = "1D1D1B"
 align = "center"
 valign = "middle"
@@ -277,11 +249,10 @@ text = "常见"
 [[shapes]]
 type = "text"
 x = "3.55cm"
-y = "14.2cm"
+y = "14.38cm"
 w = "3.2cm"
-h = "0.55cm"
+h = "0.62cm"
 bold = true
-font_size = 9.5
 color = "1D1D1B"
 valign = "middle"
 margin = ["0.03cm", "0.1cm", "0.03cm", "0.1cm"]
@@ -290,10 +261,9 @@ text = "启示"
 [[shapes]]
 type = "text"
 x = "6.95cm"
-y = "14.2cm"
+y = "14.38cm"
 w = "9.2cm"
-h = "0.55cm"
-font_size = 9.5
+h = "0.62cm"
 color = "1D1D1B"
 align = "center"
 valign = "middle"
@@ -303,10 +273,9 @@ text = "丢掉"
 [[shapes]]
 type = "text"
 x = "16.35cm"
-y = "14.2cm"
+y = "14.38cm"
 w = "13.5cm"
-h = "0.55cm"
-font_size = 9.5
+h = "0.62cm"
 color = "1D1D1B"
 align = "center"
 valign = "middle"
@@ -317,7 +286,7 @@ text = "落得上"
 [[shapes]]
 type = "line"
 x = "3.55cm"
-y = "12.55cm"
+y = "12.52cm"
 w = "26.3cm"
 h = "0.01cm"
 line = { color = "BFBFBF", width = 1 }
@@ -325,7 +294,7 @@ line = { color = "BFBFBF", width = 1 }
 [[shapes]]
 type = "line"
 x = "3.55cm"
-y = "13.1cm"
+y = "13.14cm"
 w = "26.3cm"
 h = "0.01cm"
 line = { color = "BFBFBF", width = 1 }
@@ -333,7 +302,7 @@ line = { color = "BFBFBF", width = 1 }
 [[shapes]]
 type = "line"
 x = "3.55cm"
-y = "13.65cm"
+y = "13.76cm"
 w = "26.3cm"
 h = "0.01cm"
 line = { color = "BFBFBF", width = 1 }
@@ -341,7 +310,7 @@ line = { color = "BFBFBF", width = 1 }
 [[shapes]]
 type = "line"
 x = "3.55cm"
-y = "14.2cm"
+y = "14.38cm"
 w = "26.3cm"
 h = "0.01cm"
 line = { color = "BFBFBF", width = 1 }
@@ -354,4 +323,4 @@ y = "16.25cm"
 w = "30.9cm"
 h = "0.9cm"
 styles = "insight"
-text = "把关键词改写成主张：读者扫一眼，就知道这页要说什么。"
+text = "把关键词改写成观点：读者扫一眼，就知道这页要说什么"

@@ -7,7 +7,7 @@ h = "7.82cm"
 w = "11.07cm"
 x = "1.72cm"
 y = "4.08cm"
-text = "Thank you."
+text = "Thank you"
 
 [[shapes]]
 type = "text"

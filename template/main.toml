@@ -22,6 +22,7 @@ margin = ["0.13cm", "0.25cm", "0.13cm", "0.25cm"]
 line = { width = 1, color = "D3D3D3" }
 font_face = "Microsoft YaHei"
 font_size = 14
+bullet_indent = 10
 
 [styles.text]
 margin = 0
@@ -49,7 +50,7 @@ color = "A3A3A3"
 italic = true
 
 [styles.named.card_title]
-font_size = 15
+font_size = 16
 bold = true
 color = "000000"
 fill = { color = "CCECFF" }
@@ -59,7 +60,6 @@ valign = "middle"
 margin = 0
 
 [styles.named.card]
-font_size = 12
 color = "1D1D1B"
 fill = { color = "F2F2F2" }
 line = { type = "none" }
@@ -67,7 +67,7 @@ valign = "top"
 para_space_before = 3
 
 [styles.named.frame_title]
-font_size = 15
+font_size = 16
 bold = true
 color = "0000FF"
 fill = { color = "FFFFFF" }
@@ -77,12 +77,11 @@ valign = "middle"
 margin = 0
 
 [styles.named.frame]
-font_size = 12
 color = "1D1D1B"
 fill = { color = "FFFFFF" }
 line = { color = "D3D3D3", width = 1 }
 valign = "top"
-para_space_before = 6
+para_space_before = 3
 
 [theme]
 major_font = "Arial Black"

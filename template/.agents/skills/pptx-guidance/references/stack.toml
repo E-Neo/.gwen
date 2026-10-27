@@ -10,7 +10,7 @@ master = "content"
 [[shapes]]
 type = "text"
 placeholder = "title"
-text = "TODO: 标题——一个观察，以及它意味着什么"
+text = "TODO: 标题：一个观察，以及它意味着什么"
 
 # ---- 左侧：栈 ----
 [[shapes]]
@@ -29,7 +29,6 @@ y = "2.8cm"
 w = "12cm"
 h = "0.5cm"
 text = "**标题**"
-font_size = 10.5
 color = "595959"
 margin = 0
 
@@ -41,8 +40,7 @@ w = "3.6cm"
 h = "1.6cm"
 fill = { color = "FFFFFF" }
 line = { color = "BFBFBF", width = 1 }
-text = "**主张**"
-font_size = 11.5
+text = "**观点**"
 color = "1D1D1B"
 align = "center"
 valign = "middle"
@@ -57,7 +55,6 @@ h = "1.6cm"
 fill = { color = "FFFFFF" }
 line = { color = "BFBFBF", width = 1 }
 text = "**量化**"
-font_size = 11.5
 color = "1D1D1B"
 align = "center"
 valign = "middle"
@@ -72,13 +69,12 @@ h = "1.6cm"
 fill = { color = "FFFFFF" }
 line = { color = "BFBFBF", width = 1 }
 text = "**一行**"
-font_size = 11.5
 color = "1D1D1B"
 align = "center"
 valign = "middle"
 margin = 0
 
-# 编号 1 标在主张方块上。
+# 编号 1 标在观点方块上。
 [[shapes]]
 type = "ellipse"
 x = "8.05cm"
@@ -88,7 +84,6 @@ h = "0.7cm"
 fill = { color = "C7000A" }
 line = { type = "none" }
 text = "**1**"
-font_size = 11
 color = "FFFFFF"
 align = "center"
 valign = "middle"
@@ -110,7 +105,6 @@ y = "6.2cm"
 w = "12cm"
 h = "0.5cm"
 text = "**正文**"
-font_size = 10.5
 color = "595959"
 margin = 0
 
@@ -123,7 +117,6 @@ h = "1.6cm"
 fill = { color = "FFFFFF" }
 line = { color = "BFBFBF", width = 1 }
 text = "**一条逻辑**"
-font_size = 11.5
 color = "1D1D1B"
 align = "center"
 valign = "middle"
@@ -138,7 +131,6 @@ h = "1.6cm"
 fill = { color = "FFFFFF" }
 line = { color = "BFBFBF", width = 1 }
 text = "**致密**"
-font_size = 11.5
 color = "1D1D1B"
 align = "center"
 valign = "middle"
@@ -153,7 +145,6 @@ h = "1.6cm"
 fill = { color = "FFFFFF" }
 line = { color = "BFBFBF", width = 1 }
 text = "**来源**"
-font_size = 11.5
 color = "1D1D1B"
 align = "center"
 valign = "middle"
@@ -169,7 +160,6 @@ h = "0.7cm"
 fill = { color = "C7000A" }
 line = { type = "none" }
 text = "**2**"
-font_size = 11
 color = "FFFFFF"
 align = "center"
 valign = "middle"
@@ -191,7 +181,6 @@ y = "9.3cm"
 w = "4.5cm"
 h = "1.5cm"
 text = "**启示**"
-font_size = 10.5
 color = "595959"
 valign = "middle"
 margin = 0
@@ -203,7 +192,6 @@ y = "9.3cm"
 w = "9cm"
 h = "1.5cm"
 text = "所以呢 + 然后呢"
-font_size = 11.5
 color = "1D1D1B"
 valign = "middle"
 margin = 0
@@ -218,7 +206,6 @@ h = "0.7cm"
 fill = { color = "C7000A" }
 line = { type = "none" }
 text = "**3**"
-font_size = 11
 color = "FFFFFF"
 align = "center"
 valign = "middle"
@@ -240,7 +227,6 @@ y = "11cm"
 w = "4.5cm"
 h = "1.5cm"
 text = "**版面**"
-font_size = 10.5
 color = "595959"
 valign = "middle"
 margin = 0
@@ -252,7 +238,6 @@ y = "11cm"
 w = "9cm"
 h = "1.5cm"
 text = "对称两栏 · 算出来的几何 · 内边距"
-font_size = 11.5
 color = "1D1D1B"
 valign = "middle"
 margin = 0
@@ -273,7 +258,6 @@ y = "12.7cm"
 w = "4.5cm"
 h = "1.5cm"
 text = "**配色**"
-font_size = 10.5
 color = "595959"
 valign = "middle"
 margin = 0
@@ -284,8 +268,7 @@ x = "6cm"
 y = "12.7cm"
 w = "9cm"
 h = "1.5cm"
-text = "黑白灰——红蓝只做强调"
-font_size = 11.5
+text = "黑白灰，红蓝只做强调"
 color = "1D1D1B"
 valign = "middle"
 margin = 0
@@ -306,11 +289,10 @@ x = "2.3cm"
 y = "14.5cm"
 w = "12.9cm"
 h = "1.2cm"
-font_size = 10.5
 color = "1D1D1B"
 valign = "middle"
 margin = [2, 6, 2, 6]
-text = "**有些读者只看标题和启示**——两个都要写成主张。"
+text = "**有些读者只看标题和启示**：两个都要写成观点"
 
 # ---- 中间：旋转后的透视地面，用作分隔 ----
 # SVG 是 258x30（长边横向）。旋转 270 后长边指向右边的细节，
@@ -332,7 +314,6 @@ y = "2.75cm"
 w = "14.5cm"
 h = "0.55cm"
 text = "**三种手法**"
-font_size = 10.5
 color = "595959"
 margin = 0
 
@@ -345,7 +326,6 @@ h = "0.8cm"
 fill = { color = "C7000A" }
 line = { type = "none" }
 text = "**1**"
-font_size = 11
 color = "FFFFFF"
 align = "center"
 valign = "middle"
@@ -357,8 +337,7 @@ x = "19.1cm"
 y = "3.3cm"
 w = "13.4cm"
 h = "0.9cm"
-text = "是主张，不是关键词"
-font_size = 13.5
+text = "是观点，不是关键词"
 bold = true
 color = "1D1D1B"
 margin = 0
@@ -369,8 +348,7 @@ x = "19.1cm"
 y = "4.2cm"
 w = "13.4cm"
 h = "1.8cm"
-text = "观察 + 含义；能量化就量化——关键词对扫读的读者没有信息量。"
-font_size = 11.5
+text = "观察 + 含义；能量化就量化，关键词对扫读的读者没有信息量"
 color = "1D1D1B"
 margin = 0
 
@@ -392,7 +370,6 @@ h = "0.8cm"
 fill = { color = "C7000A" }
 line = { type = "none" }
 text = "**2**"
-font_size = 11
 color = "FFFFFF"
 align = "center"
 valign = "middle"
@@ -405,7 +382,6 @@ y = "6.4cm"
 w = "13.4cm"
 h = "0.9cm"
 text = "每页只走一条逻辑"
-font_size = 13.5
 bold = true
 color = "1D1D1B"
 margin = 0
@@ -416,8 +392,7 @@ x = "19.1cm"
 y = "7.3cm"
 w = "13.4cm"
 h = "1.8cm"
-text = "正文里每一项都在支撑标题和启示；没有纯装饰的东西。"
-font_size = 11.5
+text = "正文里每一项都在支撑标题和启示；没有纯装饰的东西"
 color = "1D1D1B"
 margin = 0
 
@@ -439,7 +414,6 @@ h = "0.8cm"
 fill = { color = "C7000A" }
 line = { type = "none" }
 text = "**3**"
-font_size = 11
 color = "FFFFFF"
 align = "center"
 valign = "middle"
@@ -452,7 +426,6 @@ y = "9.5cm"
 w = "13.4cm"
 h = "0.9cm"
 text = "让启示落地"
-font_size = 13.5
 bold = true
 color = "1D1D1B"
 margin = 0
@@ -463,8 +436,7 @@ x = "19.1cm"
 y = "10.4cm"
 w = "13.4cm"
 h = "1.8cm"
-text = "所以呢 + 然后呢，16pt 加粗蓝色，居中，一行不超过 50 字。"
-font_size = 11.5
+text = "所以呢 + 然后呢，16pt 加粗蓝色，居中，一行不超过 50 字"
 color = "1D1D1B"
 margin = 0
 
@@ -483,8 +455,7 @@ x = "18cm"
 y = "12.4cm"
 w = "14.5cm"
 h = "3.2cm"
-text = "**原则**：注释标在承载论点的组件上——解释它，而不是整层。"
-font_size = 11.5
+text = "**原则**：注释标在承载论点的组件上，解释它，而不是整层"
 color = "1D1D1B"
 valign = "middle"
 margin = [8, 10, 8, 10]
@@ -496,4 +467,4 @@ y = "16.25cm"
 w = "30.9cm"
 h = "0.9cm"
 styles = "insight"
-text = "一页 = 标题 + 正文 + 启示；版面是算出来的，不是凭感觉摆的。"
+text = "一页 = 标题 + 正文 + 启示；版面是算出来的，不是凭感觉摆的"
