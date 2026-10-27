@@ -1,323 +1,352 @@
-# Frames as a worked methodology example: three round_rect frames (y=3.9,
-# h=10.2) with centered labels straddling the top edge. The first two teach
-# geometry and title-writing; the third carries a compact comparison table
-# (keyword title vs claim title) - rows separated by thin horizontal lines,
-# text cells with compact margins, no header fill, no vertical bars.
-# Frames are symmetric: 1.5-11.5, 12-22, 22.5-32.5cm.
-# Master: "content". Copy into slides/ and list in a [[sections]] entry.
+# Bad -> Good 的完整示例：左边框放关键词标题，中间用双三角箭头连接，
+# 右边框把同一批主题改写成主张；下方第三个框放一张紧凑的对照表。
+# 三个框都是 frame 变体：圆角边框 + 骑在顶边上的 frame_title。
+# 几何：上排 1.5–13.5 / 16.1–32.4，下排 1.5–32.4；箭头宽 1.55cm。
+# master："content"。复制到 slides/ 并在 [[sections]] 里登记。
 
 master = "content"
 
 [[shapes]]
 type = "text"
 placeholder = "title"
-text = "TODO: Title - an observation plus what it implies"
+text = "TODO: 标题——一个观察，以及它意味着什么"
 
-# Frame 1: geometry.
+# 左框：关键词标题——读完不知道结论。
 [[shapes]]
 type = "round_rect"
 x = "1.5cm"
-y = "3.9cm"
-w = "10cm"
-h = "10.2cm"
+y = "3.5cm"
+w = "12cm"
+h = "7.4cm"
 rect_radius = 0.1
 styles = "frame"
-text = """**Slide**
+text = """**“某某入门”**
+读者不知道你要说什么。
 
-33.88 x 19.05cm; the centre is at 16.94cm.
+**“技术介绍”**
+读完还是不知道结论。
 
-**Content region**
+**“趋势展望”**
+没有观点，也没有证据。
 
-Roughly 2.7-15.9cm; the takeaway row about 16.25cm.
+**“方法分享”**
+听完不知道怎么做。
 
-**Columns**
-
-Symmetric - left 1.5/15cm, right 17.4/15cm.
-
-**Rule**
-
-Margins mirror each other; a lopsided slide reads as unfinished."""
+关键词标题只是目录；目录不是观点。"""
 
 [[shapes]]
 type = "text"
-x = "3.8cm"
-y = "3.35cm"
-w = "5.4cm"
+x = "5.2cm"
+y = "3.05cm"
+w = "4.6cm"
 h = "0.9cm"
 styles = "frame_title"
-text = "**Geometry**"
+text = "关键词标题"
 
-# Frame 2: titles.
+# 中间：双三角箭头，从坏例子指向改写后的主张。
 [[shapes]]
-type = "round_rect"
-x = "12cm"
-y = "3.9cm"
-w = "10cm"
-h = "10.2cm"
-rect_radius = 0.1
-styles = "frame"
-text = """**A claim**
-
-Observation + what it implies.
-
-**Not a keyword**
-
-An "introduction to X" says nothing.
-
-**Quantify**
-
-"5×↑ faster", "50%↓ cheaper".
-
-**One line**
-
-Some readers only ever read the title."""
+type = "image"
+src = "media/two-triangles-right-arrow.svg"
+x = "14.02cm"
+y = "4.4cm"
+w = "1.55cm"
+h = "6.2cm"
 
 [[shapes]]
 type = "text"
-x = "14.05cm"
-y = "3.35cm"
-w = "5.9cm"
-h = "0.9cm"
-styles = "frame_title"
-text = "**Title**"
-
-# Frame 3: a small comparison table instead of long text.
-[[shapes]]
-type = "round_rect"
-x = "22.5cm"
-y = "3.9cm"
-w = "10cm"
-h = "10.2cm"
-rect_radius = 0.1
-styles = "frame"
-
-[[shapes]]
-type = "text"
-x = "23.1cm"
-y = "3.35cm"
-w = "8.8cm"
-h = "0.9cm"
-styles = "frame_title"
-text = "**Two kinds of title**"
-
-# Rows: dimension | keyword title | claim title. One highlighted row.
-[[shapes]]
-type = "text"
-x = "23.3cm"
-y = "5.6cm"
-w = "3.4cm"
-h = "1.4cm"
-bold = true
-font_size = 10
-color = "1D1D1B"
-valign = "middle"
-margin = [1, 3, 1, 3]
-text = "Declares"
-
-[[shapes]]
-type = "text"
-x = "26.8cm"
-y = "5.6cm"
-w = "2.5cm"
-h = "1.4cm"
-font_size = 10
-color = "1D1D1B"
-align = "center"
-valign = "middle"
-margin = [1, 3, 1, 3]
-text = "the topic"
-
-[[shapes]]
-type = "text"
-x = "29.4cm"
-y = "5.6cm"
-w = "2.5cm"
-h = "1.4cm"
-font_size = 10
-color = "1D1D1B"
-align = "center"
-valign = "middle"
-margin = [1, 3, 1, 3]
-text = "the point"
-
-[[shapes]]
-type = "text"
-x = "23.3cm"
-y = "7cm"
-w = "3.4cm"
-h = "1.4cm"
-bold = true
-font_size = 10
-color = "1D1D1B"
-valign = "middle"
-margin = [1, 3, 1, 3]
-text = "Reader gets"
-
-[[shapes]]
-type = "text"
-x = "26.8cm"
-y = "7cm"
-w = "2.5cm"
-h = "1.4cm"
-font_size = 10
-color = "1D1D1B"
-align = "center"
-valign = "middle"
-margin = [1, 3, 1, 3]
-text = "nothing"
-
-[[shapes]]
-type = "text"
-x = "29.4cm"
-y = "7cm"
-w = "2.5cm"
-h = "1.4cm"
-font_size = 10
-color = "1D1D1B"
-align = "center"
-valign = "middle"
-margin = [1, 3, 1, 3]
-text = "the argument"
-
-[[shapes]]
-type = "text"
-x = "23.3cm"
-y = "8.4cm"
-w = "3.4cm"
-h = "1.4cm"
-bold = true
-font_size = 10
-color = "C7000A"
-valign = "middle"
-margin = [1, 3, 1, 3]
-text = "Quantified"
-
-[[shapes]]
-type = "text"
-x = "26.8cm"
-y = "8.4cm"
-w = "2.5cm"
-h = "1.4cm"
-font_size = 10
-color = "1D1D1B"
-align = "center"
-valign = "middle"
-margin = [1, 3, 1, 3]
-text = "rarely"
-
-[[shapes]]
-type = "text"
-x = "29.4cm"
-y = "8.4cm"
-w = "2.5cm"
-h = "1.4cm"
-font_size = 10
-color = "1D1D1B"
-align = "center"
-valign = "middle"
-margin = [1, 3, 1, 3]
-text = "usually"
-
-[[shapes]]
-type = "text"
-x = "23.3cm"
-y = "9.8cm"
-w = "3.4cm"
-h = "1.4cm"
-bold = true
-font_size = 10
-color = "1D1D1B"
-valign = "middle"
-margin = [1, 3, 1, 3]
-text = "Takeaway"
-
-[[shapes]]
-type = "text"
-x = "26.8cm"
-y = "9.8cm"
-w = "2.5cm"
-h = "1.4cm"
-font_size = 10
-color = "1D1D1B"
-align = "center"
-valign = "middle"
-margin = [1, 3, 1, 3]
-text = "lost"
-
-[[shapes]]
-type = "text"
-x = "29.4cm"
-y = "9.8cm"
-w = "2.5cm"
-h = "1.4cm"
-font_size = 10
-color = "1D1D1B"
-align = "center"
-valign = "middle"
-margin = [1, 3, 1, 3]
-text = "lands on it"
-
-# Horizontal separators only.
-[[shapes]]
-type = "line"
-x = "23.3cm"
-y = "6.95cm"
-w = "8.6cm"
-h = "0.01cm"
-line = { color = "BFBFBF", width = 1 }
-
-[[shapes]]
-type = "line"
-x = "23.3cm"
-y = "8.35cm"
-w = "8.6cm"
-h = "0.01cm"
-line = { color = "BFBFBF", width = 1 }
-
-[[shapes]]
-type = "line"
-x = "23.3cm"
-y = "9.75cm"
-w = "8.6cm"
-h = "0.01cm"
-line = { color = "BFBFBF", width = 1 }
-
-[[shapes]]
-type = "text"
-x = "23.3cm"
-y = "12.3cm"
-w = "8.6cm"
-h = "1.3cm"
-font_size = 10
-italic = true
-color = "595959"
-valign = "top"
-margin = [2, 4, 2, 4]
-text = "Each row compares one shared dimension; the asymmetry between the columns is the argument."
-
-# Takeaway band.
-[[shapes]]
-type = "rect"
-x = "1.5cm"
-y = "14.55cm"
-w = "30.9cm"
-h = "1.1cm"
-fill = { color = "EAF2FF" }
-line = { type = "none" }
-
-[[shapes]]
-type = "text"
-x = "1.5cm"
-y = "14.55cm"
-w = "30.9cm"
-h = "1.1cm"
-text = "Slide = **claim** + **one logic** + **takeaway**"
-font_size = 13.5
-color = "1D1D1B"
+x = "13.6cm"
+y = "10.55cm"
+w = "2.4cm"
+h = "0.4cm"
+text = "改写"
+font_size = 9
+color = "808080"
 align = "center"
 valign = "middle"
 margin = 0
 
+# 右框：同一批主题，改写成主张。
+[[shapes]]
+type = "round_rect"
+x = "16.1cm"
+y = "3.5cm"
+w = "16.3cm"
+h = "7.4cm"
+rect_radius = 0.1
+styles = "frame"
+text = """**反例**：“某某入门”
+**改写**：“3 天独立出片：模板 + 检查清单把返工降到 1 次。”
+
+**反例**：“技术介绍”
+**改写**：“一页一条逻辑：读者 10 秒能复述结论。”
+
+**反例**：“趋势展望”
+**改写**：“标题先立主张：扫一眼就知道价值在哪。”
+
+**反例**：“方法分享”
+**改写**：“六页版式一次配齐，出片快<span class="accent">5×↑</span>、成本<span class="accent">50%↓</span>。”
+
+同一批主题，多给一句“意味着什么”，目录就变成了观点。"""
+
+[[shapes]]
+type = "text"
+x = "21.85cm"
+y = "3.05cm"
+w = "4.8cm"
+h = "0.9cm"
+styles = "frame_title"
+text = "主张标题"
+
+# 下框：一张对照表——只留横线，不加强底色和竖线。
+[[shapes]]
+type = "round_rect"
+x = "1.5cm"
+y = "11.4cm"
+w = "30.9cm"
+h = "4.1cm"
+rect_radius = 0.1
+styles = "frame"
+
+[[shapes]]
+type = "text"
+x = "13.75cm"
+y = "10.95cm"
+w = "6.4cm"
+h = "0.9cm"
+styles = "frame_title"
+text = "关键词 vs 主张"
+
+[[shapes]]
+type = "text"
+x = "3.55cm"
+y = "12cm"
+w = "3.2cm"
+h = "0.55cm"
+bold = true
+font_size = 9.5
+color = "1D1D1B"
+valign = "middle"
+margin = ["0.03cm", "0.1cm", "0.03cm", "0.1cm"]
+text = "维度"
+
+[[shapes]]
+type = "text"
+x = "6.95cm"
+y = "12cm"
+w = "9.2cm"
+h = "0.55cm"
+bold = true
+font_size = 9.5
+color = "1D1D1B"
+align = "center"
+valign = "middle"
+margin = ["0.03cm", "0.1cm", "0.03cm", "0.1cm"]
+text = "关键词标题"
+
+[[shapes]]
+type = "text"
+x = "16.35cm"
+y = "12cm"
+w = "13.5cm"
+h = "0.55cm"
+bold = true
+font_size = 9.5
+color = "1D1D1B"
+align = "center"
+valign = "middle"
+margin = ["0.03cm", "0.1cm", "0.03cm", "0.1cm"]
+text = "主张标题"
+
+[[shapes]]
+type = "text"
+x = "3.55cm"
+y = "12.55cm"
+w = "3.2cm"
+h = "0.55cm"
+bold = true
+font_size = 9.5
+color = "1D1D1B"
+valign = "middle"
+margin = ["0.03cm", "0.1cm", "0.03cm", "0.1cm"]
+text = "读者得到"
+
+[[shapes]]
+type = "text"
+x = "6.95cm"
+y = "12.55cm"
+w = "9.2cm"
+h = "0.55cm"
+font_size = 9.5
+color = "1D1D1B"
+align = "center"
+valign = "middle"
+margin = ["0.03cm", "0.1cm", "0.03cm", "0.1cm"]
+text = "什么也没有"
+
+[[shapes]]
+type = "text"
+x = "16.35cm"
+y = "12.55cm"
+w = "13.5cm"
+h = "0.55cm"
+font_size = 9.5
+color = "1D1D1B"
+align = "center"
+valign = "middle"
+margin = ["0.03cm", "0.1cm", "0.03cm", "0.1cm"]
+text = "一个结论"
+
+[[shapes]]
+type = "text"
+x = "3.55cm"
+y = "13.1cm"
+w = "3.2cm"
+h = "0.55cm"
+bold = true
+font_size = 9.5
+color = "1D1D1B"
+valign = "middle"
+margin = ["0.03cm", "0.1cm", "0.03cm", "0.1cm"]
+text = "能复述吗"
+
+[[shapes]]
+type = "text"
+x = "6.95cm"
+y = "13.1cm"
+w = "9.2cm"
+h = "0.55cm"
+font_size = 9.5
+color = "1D1D1B"
+align = "center"
+valign = "middle"
+margin = ["0.03cm", "0.1cm", "0.03cm", "0.1cm"]
+text = "不能"
+
+[[shapes]]
+type = "text"
+x = "16.35cm"
+y = "13.1cm"
+w = "13.5cm"
+h = "0.55cm"
+font_size = 9.5
+color = "1D1D1B"
+align = "center"
+valign = "middle"
+margin = ["0.03cm", "0.1cm", "0.03cm", "0.1cm"]
+text = "能"
+
+[[shapes]]
+type = "text"
+x = "3.55cm"
+y = "13.65cm"
+w = "3.2cm"
+h = "0.55cm"
+bold = true
+font_size = 9.5
+color = "1D1D1B"
+valign = "middle"
+margin = ["0.03cm", "0.1cm", "0.03cm", "0.1cm"]
+text = "可量化"
+
+[[shapes]]
+type = "text"
+x = "6.95cm"
+y = "13.65cm"
+w = "9.2cm"
+h = "0.55cm"
+font_size = 9.5
+color = "1D1D1B"
+align = "center"
+valign = "middle"
+margin = ["0.03cm", "0.1cm", "0.03cm", "0.1cm"]
+text = "罕有"
+
+[[shapes]]
+type = "text"
+x = "16.35cm"
+y = "13.65cm"
+w = "13.5cm"
+h = "0.55cm"
+font_size = 9.5
+color = "1D1D1B"
+align = "center"
+valign = "middle"
+margin = ["0.03cm", "0.1cm", "0.03cm", "0.1cm"]
+text = "常见"
+
+[[shapes]]
+type = "text"
+x = "3.55cm"
+y = "14.2cm"
+w = "3.2cm"
+h = "0.55cm"
+bold = true
+font_size = 9.5
+color = "1D1D1B"
+valign = "middle"
+margin = ["0.03cm", "0.1cm", "0.03cm", "0.1cm"]
+text = "启示"
+
+[[shapes]]
+type = "text"
+x = "6.95cm"
+y = "14.2cm"
+w = "9.2cm"
+h = "0.55cm"
+font_size = 9.5
+color = "1D1D1B"
+align = "center"
+valign = "middle"
+margin = ["0.03cm", "0.1cm", "0.03cm", "0.1cm"]
+text = "丢掉"
+
+[[shapes]]
+type = "text"
+x = "16.35cm"
+y = "14.2cm"
+w = "13.5cm"
+h = "0.55cm"
+font_size = 9.5
+color = "1D1D1B"
+align = "center"
+valign = "middle"
+margin = ["0.03cm", "0.1cm", "0.03cm", "0.1cm"]
+text = "落得上"
+
+# 只用横线分隔。
+[[shapes]]
+type = "line"
+x = "3.55cm"
+y = "12.55cm"
+w = "26.3cm"
+h = "0.01cm"
+line = { color = "BFBFBF", width = 1 }
+
+[[shapes]]
+type = "line"
+x = "3.55cm"
+y = "13.1cm"
+w = "26.3cm"
+h = "0.01cm"
+line = { color = "BFBFBF", width = 1 }
+
+[[shapes]]
+type = "line"
+x = "3.55cm"
+y = "13.65cm"
+w = "26.3cm"
+h = "0.01cm"
+line = { color = "BFBFBF", width = 1 }
+
+[[shapes]]
+type = "line"
+x = "3.55cm"
+y = "14.2cm"
+w = "26.3cm"
+h = "0.01cm"
+line = { color = "BFBFBF", width = 1 }
+
+# 启示带。
 [[shapes]]
 type = "text"
 x = "1.5cm"
@@ -325,4 +354,4 @@ y = "16.25cm"
 w = "30.9cm"
 h = "0.9cm"
 styles = "insight"
-text = "Methodology, not magic - compute the geometry, state the claim, land the takeaway."
+text = "把关键词改写成主张：读者扫一眼，就知道这页要说什么。"

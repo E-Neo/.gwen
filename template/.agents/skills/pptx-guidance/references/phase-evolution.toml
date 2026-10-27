@@ -1,19 +1,18 @@
-# Phased evolution as a worked methodology example: the chevron row is a
-# slide-writing workflow (Topic -> Claim -> Structure -> Layout -> Polish),
-# grey brackets group it into THINK / BUILD / REVIEW, and each phase card
-# below teaches one writing technique. The layouts are the point; the content
-# is the method.
-# Geometry: chevrons span 1.5-32.5cm, cards fill 7.1-15.5cm.
-# Master: "content". Copy into slides/ and list in a [[sections]] entry.
+# 分阶段演进的完整示例：一排箭头就是一个写页面的流程
+# （选题 -> 逻辑 -> 结构 -> 版面 -> 打磨），灰色方括号把它分成
+# 想清楚 / 做出来 / 复核三段，下面每张阶段卡片示范一种写法。
+# 逻辑是整页的核心：标题、正文、启示都围绕同一条逻辑。
+# 几何：箭头占 1.5–32.5cm，卡片占 7.1–15.5cm。
+# master："content"。复制到 slides/ 并在 [[sections]] 里登记。
 
 master = "content"
 
 [[shapes]]
 type = "text"
 placeholder = "title"
-text = "TODO: Title - an observation plus what it implies"
+text = "TODO: 标题——一个观察，以及它意味着什么"
 
-# Workflow chevrons, overlapping by 1.0cm. Grey except the emphasized step.
+# 流程箭头，每个互相重叠 1.0cm。除了要强调的那一步，其余都用灰色。
 [[shapes]]
 type = "chevron"
 x = "1.5cm"
@@ -22,7 +21,7 @@ w = "7cm"
 h = "2.6cm"
 fill = { color = "A6A6A6" }
 line = { type = "none" }
-text = "**Topic**"
+text = "**选题**"
 font_size = 13.5
 color = "FFFFFF"
 align = "center"
@@ -37,7 +36,7 @@ w = "7cm"
 h = "2.6cm"
 fill = { color = "C7000A" }
 line = { type = "none" }
-text = "**Claim**"
+text = "**逻辑**"
 font_size = 13.5
 color = "FFFFFF"
 align = "center"
@@ -52,7 +51,7 @@ w = "7cm"
 h = "2.6cm"
 fill = { color = "A6A6A6" }
 line = { type = "none" }
-text = "**Structure**"
+text = "**结构**"
 font_size = 13.5
 color = "FFFFFF"
 align = "center"
@@ -67,7 +66,7 @@ w = "7cm"
 h = "2.6cm"
 fill = { color = "A6A6A6" }
 line = { type = "none" }
-text = "**Layout**"
+text = "**版面**"
 font_size = 13.5
 color = "FFFFFF"
 align = "center"
@@ -82,19 +81,19 @@ w = "7cm"
 h = "2.6cm"
 fill = { color = "A6A6A6" }
 line = { type = "none" }
-text = "**Polish**"
+text = "**打磨**"
 font_size = 13.5
 color = "FFFFFF"
 align = "center"
 valign = "middle"
 margin = ["0.1cm", "0.9cm", "0.1cm", "0.4cm"]
 
-# Bracket rules grouping the workflow - all grey, with end caps.
+# 分组用的方括号线：三组之间留 0.6cm 缺口，两端各一根短竖线。
 [[shapes]]
 type = "rect"
 x = "1.5cm"
 y = "5.55cm"
-w = "11.5cm"
+w = "11.2cm"
 h = "0.06cm"
 fill = { color = "A6A6A6" }
 line = { type = "none" }
@@ -110,7 +109,7 @@ line = { type = "none" }
 
 [[shapes]]
 type = "rect"
-x = "12.97cm"
+x = "12.64cm"
 y = "5.55cm"
 w = "0.06cm"
 h = "0.55cm"
@@ -119,16 +118,16 @@ line = { type = "none" }
 
 [[shapes]]
 type = "rect"
-x = "13cm"
+x = "13.3cm"
 y = "5.55cm"
-w = "12cm"
+w = "11.4cm"
 h = "0.06cm"
 fill = { color = "A6A6A6" }
 line = { type = "none" }
 
 [[shapes]]
 type = "rect"
-x = "13cm"
+x = "13.3cm"
 y = "5.55cm"
 w = "0.06cm"
 h = "0.55cm"
@@ -137,7 +136,7 @@ line = { type = "none" }
 
 [[shapes]]
 type = "rect"
-x = "24.97cm"
+x = "24.64cm"
 y = "5.55cm"
 w = "0.06cm"
 h = "0.55cm"
@@ -146,16 +145,16 @@ line = { type = "none" }
 
 [[shapes]]
 type = "rect"
-x = "25cm"
+x = "25.3cm"
 y = "5.55cm"
-w = "7.5cm"
+w = "7.14cm"
 h = "0.06cm"
 fill = { color = "A6A6A6" }
 line = { type = "none" }
 
 [[shapes]]
 type = "rect"
-x = "25cm"
+x = "25.3cm"
 y = "5.55cm"
 w = "0.06cm"
 h = "0.55cm"
@@ -164,15 +163,55 @@ line = { type = "none" }
 
 [[shapes]]
 type = "rect"
-x = "32.44cm"
+x = "32.38cm"
 y = "5.55cm"
 w = "0.06cm"
 h = "0.55cm"
 fill = { color = "A6A6A6" }
 line = { type = "none" }
 
-# Phase cards: one per workflow group, built from card_title + card.
-# THINK - the title.
+# 三组各有一个小标签，解释括号分的是哪一段工作。
+[[shapes]]
+type = "text"
+x = "1.5cm"
+y = "6.2cm"
+w = "11.2cm"
+h = "0.45cm"
+text = "想清楚"
+font_size = 9
+color = "808080"
+align = "center"
+valign = "middle"
+margin = 0
+
+[[shapes]]
+type = "text"
+x = "13.3cm"
+y = "6.2cm"
+w = "11.4cm"
+h = "0.45cm"
+text = "做出来"
+font_size = 9
+color = "808080"
+align = "center"
+valign = "middle"
+margin = 0
+
+[[shapes]]
+type = "text"
+x = "25.3cm"
+y = "6.2cm"
+w = "7.14cm"
+h = "0.45cm"
+text = "复核"
+font_size = 9
+color = "808080"
+align = "center"
+valign = "middle"
+margin = 0
+
+# 阶段卡片：每个阶段一张，由 card_title + card 拼成。
+# 想清楚——选题与逻辑。
 [[shapes]]
 type = "rect"
 x = "1.5cm"
@@ -181,7 +220,7 @@ w = "11.2cm"
 h = "1.3cm"
 styles = "card_title"
 align = "center"
-text = "The title is a claim"
+text = "一页只讲一条逻辑"
 
 [[shapes]]
 type = "rect"
@@ -190,58 +229,88 @@ y = "8.4cm"
 w = "11.2cm"
 h = "7.1cm"
 styles = "card"
-text = """- **Formula:** observation + what it implies
-- **Quantify:** "TPS 5×↑", "cost 50%↓"
-- **Length:** one line if you can
-- **Watch out:** a keyword is not a title
-- **Serves:** the reader who only reads the title"""
+text = """**选题**
+读者是谁、已经知道什么；题太宽就拆页。
 
-# BUILD - the layout.
+**逻辑**
+标题是这条逻辑的主张，正文每段都在证明它。
+
+- 一条线：现象 → 原因 → 所以呢
+- 证据贴着论点放，不堆事实
+
+**例子**
+“成本<span class="accent">30%↓</span>、交付周期缩短两周”
+比“降本增效”多说了什么？
+
+**复核**
+删掉不支撑这条线的句子。"""
+
+# 做出来——结构与版面。
 [[shapes]]
 type = "rect"
-x = "13cm"
+x = "13.3cm"
 y = "7.1cm"
-w = "11.7cm"
+w = "11.4cm"
 h = "1.3cm"
 styles = "card_title"
 align = "center"
-text = "Layout is computed"
+text = "版面是算出来的"
 
 [[shapes]]
 type = "rect"
-x = "13cm"
+x = "13.3cm"
 y = "8.4cm"
-w = "11.7cm"
+w = "11.4cm"
 h = "7.1cm"
 styles = "card"
-text = """- **Slide:** 33.88 x 19.05cm, centre at 16.94cm
-- **Columns:** symmetric, e.g. 1.5cm/15cm + 17.4cm/15cm
-- **Content region:** roughly 2.7-15.9cm
-- **Takeaway row:** around 16.25cm
-- **Margins:** ["0.13cm", "0.25cm", "0.13cm", "0.25cm"] on text shapes"""
+text = """**结构**
+总-分-总；一页只承担一步。
 
-# REVIEW - the takeaway.
+**版面**
+33.88 × 19.05cm，中线 16.94cm。
+
+- 对称两栏：1.5/15 + 17.4/15
+- 内容区 2.7–15.9cm
+- 启示行 16.25cm
+
+**例子**
+左栏现状、右栏改法，中间用双三角箭头连接。
+
+**复核**
+卡片顶端、宽度、文字边界共用基准线。"""
+
+# 复核——打磨。
 [[shapes]]
 type = "rect"
-x = "25.2cm"
+x = "25.3cm"
 y = "7.1cm"
-w = "7.3cm"
+w = "7.14cm"
 h = "1.3cm"
 styles = "card_title"
 align = "center"
-text = "The takeaway lands"
+text = "打磨到没有死白"
 
 [[shapes]]
 type = "rect"
-x = "25.2cm"
+x = "25.3cm"
 y = "8.4cm"
-w = "7.3cm"
+w = "7.14cm"
 h = "7.1cm"
 styles = "card"
-text = """- **Formula:** so-what + now-what
-- **Style:** 16pt bold blue, centred
-- **Length:** one line, up to 50 chars
-- **Reminder:** some readers see only the title and the takeaway"""
+text = """**密度**
+填掉大空洞，不塞废话。
+
+**一致**
+卡片、圆角、线宽、字号一套。
+
+**顺序**
+先填内容，再对齐，最后删装饰。
+
+**复核**
+标题、正文、启示三样都验过。
+
+**成果**
+没有一处想问“为什么空着”。"""
 
 [[shapes]]
 type = "text"
@@ -250,4 +319,4 @@ y = "16.25cm"
 w = "30.9cm"
 h = "0.9cm"
 styles = "insight"
-text = "State the claim, compute the layout, and land the takeaway."
+text = "逻辑立住了，版面才算得出来；版面算准了，打磨才有意义。"

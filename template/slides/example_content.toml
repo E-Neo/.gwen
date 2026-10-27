@@ -1,5 +1,6 @@
 master = "content"
 
+# Use the title placeholder to write a title.
 [[shapes]]
 type = "text"
 placeholder = "title"
