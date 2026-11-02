@@ -36,6 +36,9 @@ line = { type = "none" }
 color = "C7000A"
 bold = true
 
+[styles.named.marker]
+color = "C7000A"
+
 [styles.named.insight]
 font_size = 16
 color = "0000FF"
