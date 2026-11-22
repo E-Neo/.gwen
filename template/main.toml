@@ -39,6 +39,26 @@ bold = true
 [styles.named.marker]
 color = "C7000A"
 
+[styles.named.nav]
+font_size = 9.5
+bold = true
+color = "FFFFFF"
+fill = { color = "A6A6A6" }
+line = { type = "none" }
+align = "center"
+valign = "middle"
+margin = 0
+
+[styles.named.nav_active]
+font_size = 9.5
+bold = true
+color = "FFFFFF"
+fill = { color = "C7000A" }
+line = { type = "none" }
+align = "center"
+valign = "middle"
+margin = 0
+
 [styles.named.insight]
 font_size = 16
 color = "0000FF"
